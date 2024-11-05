@@ -1,7 +1,7 @@
 const MapPage = () => {
   return (
     <div>
-      <h1>MapPage</h1>
+      <h2>MapPage</h2>
     </div>
   );
 };

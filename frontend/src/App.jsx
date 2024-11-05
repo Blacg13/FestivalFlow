@@ -1,11 +1,12 @@
-import MiniForm from './Components/MiniForm/MiniForm.jsx'
-
+import { Outlet } from 'react-router-dom';
+import MiniForm from './Components/MiniForm/MiniForm';
+import NavBar from './Components/NavBar/NavBar';
 function App() {
   return (
     <>
-      <MiniForm> </MiniForm>
+      <Outlet />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
