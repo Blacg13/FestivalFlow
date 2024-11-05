@@ -1,8 +1,10 @@
+import { createBrowserRouter } from 'react-router-dom';
+import App from './App';
+import NotFoundPage from './Containers/NotFoundPage/NotFoundPage';
 import ListPage from './Containers/ListPage/ListPage';
 import MapPage from './Containers/MapPage/MapPage';
-import NotFoundPage from './Containers/NotFoundPage/NotFoundPage';
-import App from './App';
-import { createBrowserRouter } from 'react-router-dom';
+import CommitteePage from './Containers/CommitteePage/CommitteePage';
+import ArchivesPage from './Containers/ArchivesPage/ArchivesPage';
 
 const routes = createBrowserRouter([
   {
@@ -14,8 +16,16 @@ const routes = createBrowserRouter([
         element: <ListPage />,
       },
       {
-        path: '/map',
+        path: 'map',
         element: <MapPage />,
+      },
+      {
+        path: 'committee',
+        element: <CommitteePage />,
+      },
+      {
+        path: 'archives',
+        element: <ArchivesPage />,
       },
       {
         path: '*',
