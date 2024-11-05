@@ -1,0 +1,11 @@
+.progressArrow {
+    background-color: rgb(117, 115, 126);
+    li {
+        list-style: none;
+        text-decoration: none;
+        background-color: rgb(49, 32, 45);
+    }
+    li:hover {
+        background-color: rgb(22, 20, 26);
+    }
+}

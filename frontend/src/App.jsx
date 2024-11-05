@@ -1,9 +1,11 @@
 import { Outlet } from 'react-router-dom';
-import MiniForm from './Components/MiniForm/MiniForm';
+import ProgressBar from './Components/ProgressBar/ProgressBar';
 import NavBar from './Components/NavBar/NavBar';
 function App() {
   return (
     <>
+      <ProgressBar />
+      <NavBar />
       <Outlet />
     </>
   );

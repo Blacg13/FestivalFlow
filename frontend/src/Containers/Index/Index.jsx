@@ -3,7 +3,6 @@ import NavBar from '../../Components/NavBar/NavBar';
 const Index = () => {
   return (
     <>
-      <NavBar />
       <section className={'container'}>
         <MiniForm></MiniForm>
         <div>
