@@ -1,15 +1,15 @@
 import MiniForm from '../../Components/MiniForm/MiniForm';
 import NavBar from '../../Components/NavBar/NavBar';
-const Index = () => {
+const List = () => {
   return (
     <>
       <section className={'container'}>
-        <MiniForm></MiniForm>
+        {/* <MiniForm></MiniForm> */}
         <div>
-          <p contentEditable>hello world !</p>
+          <p>hello world !</p>
         </div>
       </section>
     </>
   );
 };
-export default Index;
+export default List;

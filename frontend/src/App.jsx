@@ -4,7 +4,7 @@ import NavBar from './Components/NavBar/NavBar';
 function App() {
   return (
     <>
-      <ProgressBar />
+      {/* <ProgressBar /> */}
       <NavBar />
       <Outlet />
     </>

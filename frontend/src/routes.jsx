@@ -1,4 +1,4 @@
-import Index from './Containers/Index/Index';
+import ListPage from './Containers/ListPage/ListPage';
 import MapPage from './Containers/MapPage/MapPage';
 import NotFoundPage from './Containers/NotFoundPage/NotFoundPage';
 import App from './App';
@@ -11,7 +11,7 @@ const routes = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Index />,
+        element: <ListPage />,
       },
       {
         path: '/map',

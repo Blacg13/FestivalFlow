@@ -4,13 +4,23 @@ const NavBar = () => {
   const location = useLocation();
   return (
     <ul className={style.navbar}>
-      <li className={location.pathname === '/' && style.currentPage}>
+      <li
+        className={
+          location.pathname === '/' ? style.currentPage : style.notCurrentPage
+        }
+      >
         <Link to={'/frontend/src/Containers/Index/Index.jsx'}>
           <img src='../../Assets/information.png' alt='Home page icon' />
           <p>Home</p>
         </Link>
       </li>
-      <li className={location.pathname === '/map' && style.currentPage}>
+      <li
+        className={
+          location.pathname === '/map'
+            ? style.currentPage
+            : style.notCurrentPage
+        }
+      >
         <Link to={'/frontend/src/Containers/MapPage/MapPage.jsx'}>
           <img src='../../Assets/download.png' alt='Map page icon' />
           <p>Map</p>
