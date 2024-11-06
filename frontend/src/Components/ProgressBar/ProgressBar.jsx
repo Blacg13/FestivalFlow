@@ -1,5 +1,6 @@
 import style from './ProgressBar.module.css';
 const ProgressBar = () => {
+  //todo: librairie pour aller scroller de manière smooth vers la div correspondante
   return (
     <>
       <div className={style.progressDiv}>

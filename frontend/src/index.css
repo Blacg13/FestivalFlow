@@ -5,10 +5,40 @@
   list-style-type: none;
   text-decoration: none;
 }
+@font-face {
+  font-family: 'Inknut Antiqua';
+  src: local("./fonts/InknutAntiqua-Regular.ttf"), format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* @font-face {
+  font-family: 'Inknut Antiqua';
+  src: url("/frontend/src/fonts/InknutAntiqua-SemiBold.ttf");
+  font-weight: bold; 
+}
+*/
+@font-face {
+  font-family: 'Maitree';
+  src: url("./fonts/Maitree-Regular.ttf"), format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* @font-face {
+  font-family: 'Maitree', semi-bold;
+  src: url("/frontend/src/fonts/Maitree-SemiBold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Maitree';
+  src: url("/frontend/src/fonts/Maitree-Bold.ttf");
+  font-weight: bolder;
+} */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Maitree", "Inknut Antiqua";
+  font-size: 25px;
   line-height: 1.5;
   font-weight: 400;
+  line-height: 50px;
 
   color-scheme: light dark;
   background-color: var(--far-bg-color);
@@ -16,27 +46,25 @@
 
   --far-bg-color: #2a2c31;
   --close-bg-color: #ebd1d4;
-  --active-color: #e0cccd;
-  --list-bg-color: #efdc81;
-  /* --current-list-bg-color: #ebce5e; */
+  --active-color: #000000;
+  --list-bg-color: #F8FCDA;
   --map-bg-color: #B0D7FF;
-  /* --current-map-bg-color: #91caff; */
-  --comittee-bg-color: #9CC9A2;
-  /* --current-comittee-bg-color: #bdddbf; */
-  --archives-bg-color: #95BBBB;
-  /* --current-archives-bg-color: #c6dbdb; */
-  /* --list-bg-color: #63A77A;
-  --map-bg-color: #EFDC81;
-  --comittee-bg-color: #BE6C33;
-  --archives-bg-color: #8F2A18; */
+  --comittee-bg-color: #efdc81 ;
+  --archives-bg-color: #9CC9A2;
+  --title-font: "Inknut Antiqua";
+  --text-font: "Maitree";
 }
-
 .container {
     padding: 15px;
     border-top-right-radius: 3px;
     border-bottom: 3px;
   }
-
+p {
+  font-family: var(--text-font);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font);
+}
 .miniInput {
     border: none;
     background-color: transparent;

@@ -5,12 +5,13 @@
     column-gap: 20px;
     overflow: visible;
     li {
-        width: 200px;
+        width: 280px;
         height: 30px;
         padding: 10px;
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 10px;
         align-items: center;
         margin: 5px;
         border-top-left-radius: 25px;
@@ -18,11 +19,12 @@
         list-style: none;
         text-decoration: none;
         img {
-            width: 45px;
-            margin: 4px;
+            height: 32px;
         }
         p {
             margin: 2px;
+            font: var(--title-font);
+            font-size: 28px;
         }
     }
 }
