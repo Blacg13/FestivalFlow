@@ -15,15 +15,43 @@
   color: rgb(48, 48, 48);
 
   --far-bg-color: #2a2c31;
-  --close-bg-color: #EFDC81;
-  --active-color: #B0D7FF;
-  --list-bg-color: #EFDC81;
-  --map-bg-color: #414A78;
-  --comittee-bg-color: #8E4A49;
-}
-.container {
-  padding: 1rem;
-  border-radius: 3px;
-  background-color: var(--list-bg-color);
+  --close-bg-color: #ebd1d4;
+  --active-color: #e0cccd;
+  --list-bg-color: #efdc81;
+  /* --current-list-bg-color: #ebce5e; */
+  --map-bg-color: #B0D7FF;
+  /* --current-map-bg-color: #91caff; */
+  --comittee-bg-color: #9CC9A2;
+  /* --current-comittee-bg-color: #bdddbf; */
+  --archives-bg-color: #95BBBB;
+  /* --current-archives-bg-color: #c6dbdb; */
+  /* --list-bg-color: #63A77A;
+  --map-bg-color: #EFDC81;
+  --comittee-bg-color: #BE6C33;
+  --archives-bg-color: #8F2A18; */
 }
 
+.container {
+    padding: 15px;
+    border-top-right-radius: 3px;
+    border-bottom: 3px;
+  }
+
+.miniInput {
+    border: none;
+    background-color: transparent;
+    border-bottom: double thick var(--active-color);
+  }
+/**colors:*/
+.listPage {
+    background-color: var(--list-bg-color);
+  }
+.mapPage {
+ background-color: var(--map-bg-color);
+}
+.committeePage {
+  background-color: var(--comittee-bg-color);
+}
+.archivesPage {
+  background-color: var(--archives-bg-color);
+}

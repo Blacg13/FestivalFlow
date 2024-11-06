@@ -6,6 +6,8 @@ import MapPage from './Containers/MapPage/MapPage';
 import CommitteePage from './Containers/CommitteePage/CommitteePage';
 import ArchivesPage from './Containers/ArchivesPage/ArchivesPage';
 
+//todo: debug routes */
+
 const routes = createBrowserRouter([
   {
     path: '',
@@ -13,6 +15,11 @@ const routes = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <ListPage />,
+        //todo: <ConnexionPage />
+      },
+      {
+        path: '/list',
         element: <ListPage />,
       },
       {

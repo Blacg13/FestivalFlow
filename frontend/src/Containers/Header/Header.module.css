@@ -1,0 +1,10 @@
+.header {
+    padding: 10px;
+    padding-top: 20px;
+    width: 100%;
+    /* height: 100px; */
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    margin-bottom: -25px;
+}

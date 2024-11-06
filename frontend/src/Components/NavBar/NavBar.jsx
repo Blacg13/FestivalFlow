@@ -1,55 +1,32 @@
-import { Link, Route, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import style from './NavBar.module.css';
 const NavBar = () => {
-  const location = useLocation();
   return (
     <ul className={style.navbar}>
-      <li
-        className={
-          location.pathname === '/' ? style.currentPage : style.notCurrentPage
-        }
-      >
-        <Link to={'/'}>
-          <img src='../../Assets/information.png' alt='Home page icon' />
+      <Link to={'/list'}>
+        <li className={'listPage'}>
           <p>Home</p>
-        </Link>
-      </li>
-      <li
-        className={
-          location.pathname === '/map'
-            ? style.currentPage
-            : style.notCurrentPage
-        }
-      >
-        <Link to={'/map'}>
-          <img src='../../Assets/download.png' alt='Map page icon' />
+          <img src='../../Assets/information.png' alt='Home icon' />
+        </li>
+      </Link>
+      <Link to={'/map'}>
+        <li className={'mapPage'}>
           <p>Map</p>
-        </Link>
-      </li>
-      <li
-        className={
-          location.pathname === '/committee'
-            ? style.currentPage
-            : style.notCurrentPage
-        }
-      >
-        <Link to={'/committee'}>
-          <img src='../../Assets/information.png' alt='Committee page icon' />
+          <img src='../../Assets/download.png' alt='Map icon' />
+        </li>
+      </Link>
+      <Link to={'/committee'}>
+        <li className={'committeePage'}>
           <p>Committee</p>
-        </Link>
-      </li>
-      <li
-        className={
-          location.pathname === '/archives'
-            ? style.currentPage
-            : style.notCurrentPage
-        }
-      >
-        <Link to={'/archives'}>
-          <img src='../../Assets/information.png' alt='Archives page icon' />
+          <img src='../../Assets/information.png' alt='Committee icon' />
+        </li>
+      </Link>
+      <Link to={'/archives'}>
+        <li className={'archivesPage'}>
           <p>Archives</p>
-        </Link>
-      </li>
+          <img src='../../Assets/information.png' alt='Archives icon' />
+        </li>
+      </Link>
     </ul>
   );
 };

@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom';
-import ProgressBar from './Components/ProgressBar/ProgressBar';
-import NavBar from './Components/NavBar/NavBar';
+import Header from './Containers/Header/Header';
 function App() {
   return (
     <>
-      {/* <ProgressBar /> */}
-      <NavBar />
-      <Outlet />
+      <Header />
+      <div className='container'>
+        <Outlet />
+      </div>
     </>
   );
 }
