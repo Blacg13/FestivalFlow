@@ -11,28 +11,12 @@
   font-weight: normal;
   font-style: normal;
 }
-/* @font-face {
-  font-family: 'Inknut Antiqua';
-  src: url("/frontend/src/fonts/InknutAntiqua-SemiBold.ttf");
-  font-weight: bold; 
-}
-*/
 @font-face {
   font-family: 'Maitree';
   src: url("./fonts/Maitree-Regular.ttf"), format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-/* @font-face {
-  font-family: 'Maitree', semi-bold;
-  src: url("/frontend/src/fonts/Maitree-SemiBold.ttf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: 'Maitree';
-  src: url("/frontend/src/fonts/Maitree-Bold.ttf");
-  font-weight: bolder;
-} */
 :root {
   font-family: "Maitree", "Inknut Antiqua";
   font-size: 25px;
