@@ -1,9 +1,6 @@
 .navbar {
-    width: 100%;
-    margin-bottom: -5px;
     display: flex;
     column-gap: 20px;
-    overflow: visible;
     li {
         width: 280px;
         height: 30px;
@@ -13,16 +10,12 @@
         justify-content: center;
         gap: 10px;
         align-items: center;
-        margin: 5px;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
-        list-style: none;
-        text-decoration: none;
         img {
             height: 32px;
         }
         p {
-            margin: 2px;
             font: var(--title-font);
             font-size: 28px;
         }

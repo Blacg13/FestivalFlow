@@ -1,5 +1,5 @@
 .progressDiv {
-    width: 90%;
+    min-width: 1250px;
     align-self: center;
 }
 .progressArrow {
