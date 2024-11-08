@@ -17,7 +17,7 @@ const AccordionItem = () => {
       >
         <div className={style.accordionItem}>
           <div className={style.accordionTitle}>
-            <p>Accordion Item :</p>
+            {isActive ? <p>Accordion Item :</p> : <p>Accordion Item</p>}
           </div>
           {isActive ? (
             <div className={style.accordionContent}>
@@ -26,7 +26,9 @@ const AccordionItem = () => {
               sequi obcaecati quod sed facilis perferendis doloribus ut nihil
               fuga, iure minus!
             </div>
-          ) : null}
+          ) : (
+            <div className={style.accordionTriangle}></div>
+          )}
         </div>
       </section>
     </>

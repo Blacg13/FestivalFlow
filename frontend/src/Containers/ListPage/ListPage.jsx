@@ -6,7 +6,7 @@ const List = () => {
         {/* <MiniForm></MiniForm> */}
         <div>
           <h2>ListPage</h2>
-          <AccordionItem />
+          <AccordionItem></AccordionItem>
         </div>
       </>
     </>

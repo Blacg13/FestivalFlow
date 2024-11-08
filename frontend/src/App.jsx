@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Containers/Header/Header';
 import Footer from './Containers/Footer/Footer';
+import AccordionItem from './Components/AccordionItem/AccordionItem';
 function App() {
   const location = useLocation();
   const pagecolor = () => {
@@ -31,6 +32,7 @@ function App() {
       {location.pathname !== '/' && <Header />}
       <main className={pagecolor()}>
         <Outlet />
+        <AccordionItem></AccordionItem>
       </main>
       <Footer />
     </>
