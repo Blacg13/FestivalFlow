@@ -1,12 +1,12 @@
-import MiniForm from '../../Components/MiniForm/MiniForm';
-import NavBar from '../../Components/NavBar/NavBar';
+import AccordionItem from '../../Components/AccordionItem/AccordionItem';
 const List = () => {
   return (
     <>
       <>
         {/* <MiniForm></MiniForm> */}
         <div>
-          <p>hello world !</p>
+          <h2>ListPage</h2>
+          <AccordionItem />
         </div>
       </>
     </>

@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     padding: 30px;
-    bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
     p {
         color: var(--close-bg-color);
         font-size: 15px;

@@ -1,0 +1,53 @@
+.accordionBG {
+    margin: 100px;
+    border-radius: 0px;
+    width: 300px;
+    min-height: 30px;
+    box-shadow: 3px 3px 10px 0.3px var(--dark-color);
+    background-color: var(--dark-color);
+    --dark-color: #b18820;
+    --pale-color: palegoldenrod;
+}
+.noteOpenStyle {
+    /* transform: scale(1); */
+    border: solid 7px var(--pale-color);
+    
+    .accordionItem {
+        gap: 10px;
+        clip-path: polygon(90% 0, 100% 15%, 100% 100%, 0 100%, 0 0);
+    }
+    .accordionTitle {
+        padding-bottom: 10px;
+    }
+    .accordionContent {
+        border-left: double thick var(--dark-color);
+        padding: 5px;
+    }
+}
+.noteClosedStyle {
+    /* transform: scale(0); */
+    clip-path: polygon(0 0, 90% 0%, 100% 45%, 100% 100%, 0 100%);
+    .accordionItem {
+    /* border: solid 4px #b18820; */
+    clip-path: polygon(0 0, 90% 0%, 90% 45%, 100% 45%, 100% 100%, 0 100%);
+  }
+  .accordionTitle {
+    border-left: double thick var(--dark-color);
+    padding-left: 10px;
+  }
+
+}
+.accordionItem {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--pale-color);
+    padding: 15px;
+    font-size: 12px;
+    line-height: normal;
+    /* clip-path: polygon(85% 0, 100% 15%, 100% 100%, 0 100%, 0 0); */
+    
+}
+.accordionTitle {
+    font-weight: 600;
+    cursor: pointer;
+}

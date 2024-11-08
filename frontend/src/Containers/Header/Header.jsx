@@ -3,10 +3,10 @@ import NavBar from '../../Components/NavBar/NavBar';
 import style from './Header.module.css';
 const Header = () => {
   return (
-    <section className={style.header}>
+    <div className={style.header}>
       <ProgressBar />
       <NavBar />
-    </section>
+    </div>
   );
 };
 export default Header;

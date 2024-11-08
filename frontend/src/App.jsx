@@ -1,5 +1,4 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import classnames from 'classnames';
 import Header from './Containers/Header/Header';
 import Footer from './Containers/Footer/Footer';
 function App() {
@@ -30,9 +29,9 @@ function App() {
   return (
     <>
       {location.pathname !== '/' && <Header />}
-      <section className={classnames('page', pagecolor())}>
+      <main className={pagecolor()}>
         <Outlet />
-      </section>
+      </main>
       <Footer />
     </>
   );
