@@ -15,9 +15,21 @@ mongoose
   })
   .catch((err) => console.log('error connecting to mongodb', err));
 
-//* Routes
+//* Routes =============================================================>
 const emplacements = require('./routes/api/emplacements');
 app.use('/api/emplacements', emplacements);
+
+//todo: route pour applications
+
+//todo: route pour individuals
+
+const exhibitors = require('./routes/api/exhibitors');
+app.use('/api/exhibitors', exhibitors);
+
+//todo: route + fichier pour committeeMembers
+//todo: route + fichier pour editions
+
+//* Routes <=============================================================
 
 const port = process.env.PORT || 5000;
 
