@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 const CommitteeMemberSchema = new Schema({
   responsability: String,
-  person: [
+  personRef: [
+    //^[child]: Individual
     {
       type: Schema.Types.ObjectId,
       ref: 'Individual',

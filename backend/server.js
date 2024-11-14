@@ -15,13 +15,15 @@ mongoose
   })
   .catch((err) => console.log('error connecting to mongodb', err));
 
-//* Routes =============================================================>
+//* Routes =========================================================>>>>>
 const emplacements = require('./routes/api/emplacements');
 app.use('/api/emplacements', emplacements);
 
-//todo: route pour applications
+const applications = require('./routes/api/applications');
+app.use('/api/applications', applications);
 
-//todo: route pour individuals
+const individuals = require('./routes/api/individuals');
+app.use('/api/individuals', individuals);
 
 const exhibitors = require('./routes/api/exhibitors');
 app.use('/api/exhibitors', exhibitors);
@@ -29,7 +31,7 @@ app.use('/api/exhibitors', exhibitors);
 //todo: route + fichier pour committeeMembers
 //todo: route + fichier pour editions
 
-//* Routes <=============================================================
+//* Routes <<<<<=========================================================
 
 const port = process.env.PORT || 5000;
 

@@ -5,6 +5,7 @@ const EmplacementSchema = new Schema({
   name: {
     type: String,
     required: true,
+    unique: true,
   },
   localisation: String,
   sunshineHours: [Number],

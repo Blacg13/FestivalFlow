@@ -8,7 +8,8 @@ const ExhibitorSchema = new Schema({
   businessName: String,
   job: String,
   specialty: String,
-  person: [
+  personRef: [
+    //^[child]: Individual
     {
       type: Schema.Types.ObjectId,
       ref: 'Individual',
@@ -33,23 +34,32 @@ const ExhibitorSchema = new Schema({
   steps: {
     step1interest: Boolean,
     step2needInfo: Boolean,
-    step3contract: { received: Boolean, send: Boolean, inOrder: Boolean },
-    step4payment: { received: Boolean, announced: Boolean },
+    step3contract: {
+      contractReceived: Boolean,
+      contractSend: Boolean,
+      contractInOrder: Boolean,
+    },
+    step4payment: { paymentReceived: Boolean, paymentAnnounced: Boolean },
     step5advertOnWebsite: Boolean,
     step6welcoming: Boolean,
     step7refund: Boolean,
     step8recontactNextYear: Boolean,
   },
-  application: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Application',
-    },
-  ],
+  // applicationRef: [
+  //   {
+  //     type: Schema.Types.ObjectId,
+  //     ref: 'Application',
+  //   },
+  // ],
   //* list of exchanged emails:
-  lastEmails: [
-    { Timestamp: Date, summary: String, object: String, content: String },
-  ],
+  // lastEmails: [
+  //   {
+  //     Timestamp: String,
+  //     lemSummary: String,
+  //     lemObject: String,
+  //     lemContent: String,
+  //   },
+  // ],
   //* personal notes:
   description: [String], //domain/exhibitor description
   memo: [String], //memo for later

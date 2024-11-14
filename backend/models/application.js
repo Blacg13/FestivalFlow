@@ -2,12 +2,30 @@ const mongoose = require('mongoose');
 const Emplacement = require('./emplacement');
 const Schema = mongoose.Schema;
 
+//^ APPLICATION
+
 const ApplicationSchema = new Schema({
-  year: { type: Number, required: true },
-  emplacement: {
-    type: Schema.Types.ObjectId,
-    ref: 'Emplacement',
+  year: {
+    type: Number,
+    required: true,
+    default: new Date().getFullYear(),
   },
+  exhibitorRef: [
+    {
+      //^>[child]: Exhibitor
+      type: Schema.Types.ObjectId,
+      ref: 'Exhibitor',
+      required: true,
+    },
+  ],
+  emplacementRef: [
+    {
+      //^>[child]: Emplacement
+      type: Schema.Types.ObjectId,
+      ref: 'Emplacement',
+      unique: true,
+    },
+  ],
   stall: {
     FWB: Boolean,
     height: Number,
