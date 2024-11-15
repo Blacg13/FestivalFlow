@@ -1,10 +1,11 @@
+import ApplicationModule from '../../Components/ApplicationModule/ApplicationModule';
 import AccordionItem from '../../Components/AccordionItem/AccordionItem';
 const List = () => {
   return (
     <>
       <>
         <div>
-          <h2>ListPage</h2>
+          <ApplicationModule />
         </div>
       </>
     </>
