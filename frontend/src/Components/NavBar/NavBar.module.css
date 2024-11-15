@@ -6,9 +6,9 @@
         height: 30px;
         padding: 10px;
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row-reverse nowrap;
         justify-content: center;
-        gap: 10px;
+        gap: 15px;
         align-items: center;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;

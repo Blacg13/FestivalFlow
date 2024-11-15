@@ -1,5 +1,4 @@
 .accordionBG {
-    margin: 100px;
     border-radius: 0px;
     width: 300px;
     min-height: 30px;
@@ -10,7 +9,6 @@
 }
 .noteOpenStyle {
     background-color: var(--dark-color);
-    /* transform: scale(1); */
     
     .accordionItem {
         display: flex;
@@ -39,7 +37,7 @@
     .accordionTitle {
         border-left: double thick var(--dark-color);
         padding-left: 10px;
-        user-select: none;
+        width: 90%;
     }
     .accordionTriangle {
         position: absolute;

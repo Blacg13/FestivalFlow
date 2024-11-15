@@ -63,6 +63,10 @@ p {
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--title-font);
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 }
 .miniInput {
   border: none;
@@ -73,13 +77,10 @@ h1, h2, h3, h4, h5, h6 {
 main {
   margin-top: 20px;
   padding: 30px;
-  min-height: 500px;
+  min-height: 600px;
   min-width: 1300px;
   border-top-right-radius: 3px;
   border-bottom: 3px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
   }
 .listPage {
   background-color: var(--list-bg-color);

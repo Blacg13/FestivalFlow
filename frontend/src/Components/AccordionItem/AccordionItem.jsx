@@ -9,15 +9,14 @@ const AccordionItem = () => {
   return (
     <>
       <section
-        onClick={clickHandler}
         className={classnames(
           isActive ? style.noteOpenStyle : style.noteClosedStyle,
           style.accordionBG
         )}
       >
         <div className={style.accordionItem}>
-          <div className={style.accordionTitle}>
-            {isActive ? <p>Accordion Item :</p> : <p>Accordion Item</p>}
+          <div className={style.accordionTitle} onClick={clickHandler}>
+            {isActive ? <p>{'Accordion Item'} :</p> : <p>{'Accordion Item'}</p>}
           </div>
           {isActive ? (
             <div className={style.accordionContent}>

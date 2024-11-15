@@ -32,7 +32,6 @@ function App() {
       {location.pathname !== '/' && <Header />}
       <main className={pagecolor()}>
         <Outlet />
-        <AccordionItem></AccordionItem>
       </main>
       <Footer />
     </>
