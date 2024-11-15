@@ -31,26 +31,26 @@ const ExhibitorSchema = new Schema({
     banished: Boolean,
   },
   //*application + steps :
-  steps: {
-    step1interest: Boolean,
-    step2needInfo: Boolean,
-    step3contract: {
-      contractReceived: Boolean,
-      contractSend: Boolean,
-      contractInOrder: Boolean,
-    },
-    step4payment: { paymentReceived: Boolean, paymentAnnounced: Boolean },
-    step5advertOnWebsite: Boolean,
-    step6welcoming: Boolean,
-    step7refund: Boolean,
-    step8recontactNextYear: Boolean,
-  },
-  // applicationRef: [
-  //   {
-  //     type: Schema.Types.ObjectId,
-  //     ref: 'Application',
+  // steps: {
+  //   step1interest: Boolean,
+  //   step2needInfo: Boolean,
+  //   step3contract: {
+  //     contractReceived: Boolean,
+  //     contractSend: Boolean,
+  //     contractInOrder: Boolean,
   //   },
-  // ],
+  //   step4payment: { paymentReceived: Boolean, paymentAnnounced: Boolean },
+  //   step5advertOnWebsite: Boolean,
+  //   step6welcoming: Boolean,
+  //   step7refund: Boolean,
+  //   step8recontactNextYear: Boolean,
+  // },
+  applicationRef: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Application',
+    },
+  ],
   //* list of exchanged emails:
   // lastEmails: [
   //   {

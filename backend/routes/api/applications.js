@@ -43,7 +43,6 @@ router.get('/:id', (request, response) => {
 router.post('/', (request, response) => {
   const newApplication = new Application({
     year: request.body.year,
-    exhibitorRef: request.body.exhibitorRef, //^>Child
     emplacementRef: request.body.exhibitorRef, //^>Child
     stall: {
       FWB: request.body.FWB,

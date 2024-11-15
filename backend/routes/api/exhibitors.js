@@ -35,23 +35,24 @@ router.post('/', (request, response) => {
       disappointed: request.body.disappointed,
       banished: request.body.banished,
     },
-    steps: {
-      step1interest: request.body.step1interest,
-      step2needInfo: request.body.step2needInfo,
-      step3contract: {
-        contractReceived: request.body.step3contract.contractReceived,
-        contractSend: request.body.step3contract.contractSend,
-        contractInOrder: request.body.step3contract.contractInOrder,
-      },
-      step4payment: {
-        paymentReceived: request.body.step4payment.paymentReceived,
-        paymentAnnounced: request.body.step4payment.paymentAnnounced,
-      },
-      step5advertOnWebsite: request.body.step5advertOnWebsite,
-      step6welcoming: request.body.step6welcoming,
-      step7refund: request.body.step7refund,
-      step8recontactNextYear: request.body.step8recontactNextYear,
-    },
+    // steps: {
+    //   step1interest: request.body.step1interest,
+    //   step2needInfo: request.body.step2needInfo,
+    //   step3contract: {
+    //     contractReceived: request.body.step3contract.contractReceived,
+    //     contractSend: request.body.step3contract.contractSend,
+    //     contractInOrder: request.body.step3contract.contractInOrder,
+    //   },
+    //   step4payment: {
+    //     paymentReceived: request.body.step4payment.paymentReceived,
+    //     paymentAnnounced: request.body.step4payment.paymentAnnounced,
+    //   },
+    //   step5advertOnWebsite: request.body.step5advertOnWebsite,
+    //   step6welcoming: request.body.step6welcoming,
+    //   step7refund: request.body.step7refund,
+    //   step8recontactNextYear: request.body.step8recontactNextYear,
+    // },
+    applicationRef: request.body.applicationRef,
     // lastEmails
     description: request.body.description,
     memo: request.body.memo,

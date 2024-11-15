@@ -10,14 +10,6 @@ const ApplicationSchema = new Schema({
     required: true,
     default: new Date().getFullYear(),
   },
-  exhibitorRef: [
-    {
-      //^>[child]: Exhibitor
-      type: Schema.Types.ObjectId,
-      ref: 'Exhibitor',
-      required: true,
-    },
-  ],
   emplacementRef: [
     {
       //^>[child]: Emplacement
