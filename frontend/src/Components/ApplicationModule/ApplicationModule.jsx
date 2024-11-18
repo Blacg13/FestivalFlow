@@ -1,91 +1,50 @@
-import { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import style from './ApplicationModule.module.css';
-import axios from 'axios';
+import useSWR from 'swr';
+import { fetchEmplacements } from '../../Services/fetchEmplacements.js';
 
 const ApplicationModule = () => {
-  const theURL = 'http://localhost:5000/api/emplacements/'; //!
-  const emplacementRef = useRef(localStorage.getItem('emplacements'));
-  let theEmplacements = [null];
-  let theLocations = [null];
+  const { data, isLoading, error } = useSWR('emplacements', fetchEmplacements);
+  // const test = await fetchEmplacements();
+  console.log('test', data, isLoading);
 
-  useEffect(() => {
-    axios
-      .get(theURL)
-      .then(({ data }) => {
-        localStorage.setItem('emplacements', JSON.stringify(data));
-        emplacementRef.current = data;
-        console.log('emplacementRef :', emplacementRef.current); //it's alive !
+  if (isLoading || !data) {
+    return (
+      <div className='spinner'>
+        <p>Chargement...</p>
+      </div>
+    );
+  }
 
-        //autre façon de faire qui marche pas :
-        theEmplacements = [...emplacementRef.current];
-        console.log('emplacements', theEmplacements);
-        theLocations = [
-          ...new Set(
-            theEmplacements.map((emplacement) => emplacement.localisation)
-          ),
-        ];
-        console.log('locations', theLocations);
-        // fin de l'autre manière qui marche pas T_T
-      })
-      .catch((error) => {
-        console.log('error', error);
-      });
-  }, [emplacementRef.current, theURL]);
-  // console.log(emplacementRef.current[0].name);
+  const theEmplacementsOfDeath = Map.groupBy(data, (emp) => emp.localisation);
 
   return (
     <>
-      <div>yay</div>
-      {emplacementRef.current.map((emplacement) => {
-        //it's dead T_T
-        return (
-          <option key={emplacement._id} value={emplacement.name}>
-            {emplacement.name}
-          </option>
-        );
-      })}
+      <div className={style.applicationModuleBG}>
+        <label htmlFor='emplacement'>Emplacement :</label>
+        <select className={style.select} name='emplacement' id='emplacement'>
+          {Array.from(theEmplacementsOfDeath.entries()).map(
+            ([empKey, empVal]) => {
+              console.log('key', empKey);
+
+              //it's dead T_T
+              return (
+                <optgroup key={empKey} label={empKey}>
+                  {empVal.map((emp) => {
+                    console.log('val', emp);
+                    return (
+                      <option key={empKey + '-' + emp.name} value={emp.name}>
+                        {emp.name}
+                      </option>
+                    );
+                  })}
+                </optgroup>
+              );
+            }
+          )}
+        </select>
+      </div>
     </>
   );
 };
 export default ApplicationModule;
-
-/**
-  return (
-    <section className={style.applicationModuleBG}>
-      <form>
-        <label htmlFor='emplacement'>Emplacement :</label>
-        <select name='emplacement' id='emplacement'>
-        </select>
-      </form>
-    </section>
-  );
-
-
- * 
- * 
- *           {theLocations.map((location) => {
-            return <optgroup label={location}>{location}</optgroup>;
-          })}
-
- *           {locations.map((location) => {
-            return <optgroup label={location}>location</optgroup>;
-          })}
- */
-
-/**
-                 {emplacementNames.map((name) => {
-            return <option value={name}>{name}</option>;
-          })}
-
-          {emplacementData.map((location, name) => {
-                      return (
-                        <optgroup label={location}>
-                          { emplacementData.forEach(emplacement => {
-                            if (emplacement.) {
-                          });
-
-                          }
-                        </optgroup>
-                      );
-                    })}
- */

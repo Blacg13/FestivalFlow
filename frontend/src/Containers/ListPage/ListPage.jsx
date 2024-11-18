@@ -4,12 +4,7 @@ const List = () => {
   return (
     <>
       <>
-        <div>
-          <label htmlFor='emplacement'>Emplacement :</label>
-          <select name='emplacement' id='emplacement'>
-            <ApplicationModule />
-          </select>
-        </div>
+        <ApplicationModule />
       </>
     </>
   );

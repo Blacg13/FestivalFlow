@@ -97,3 +97,9 @@ main {
 .connexionPage {
   background-color: var(--far-bg-color);
 }
+/* isLoading */
+.spinner {
+  content: 🦐 ;
+  color: violet;
+/* todo: react-spring animation spinner */
+}

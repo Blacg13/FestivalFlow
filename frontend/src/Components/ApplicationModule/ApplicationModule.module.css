@@ -6,3 +6,6 @@
     display: flex;
     flex-flow: column wrap;
 }
+.select {
+    background-color: aqua;
+}

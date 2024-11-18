@@ -10,6 +10,6 @@ const EmplacementSchema = new Schema({
   localisation: String,
   sunshineHours: [Number],
   description: [String],
-  // isAvailable: true,
+  isAvailable: Boolean,
 });
 module.exports = Emplacement = mongoose.model('Emplacement', EmplacementSchema);

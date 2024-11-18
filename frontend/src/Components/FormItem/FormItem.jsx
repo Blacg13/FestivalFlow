@@ -11,6 +11,7 @@ const MiniForm = ({
     <div className={style.minidiv}>
       <label htmlFor={inputName}>{inputName} :</label>
       <input
+        key={inputName}
         className={style.hiddenput}
         type={inputType}
         name={inputName}
