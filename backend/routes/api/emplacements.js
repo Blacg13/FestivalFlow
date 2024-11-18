@@ -27,6 +27,7 @@ router.post('/', (request, response) => {
     localisation: request.body.localisation,
     sunshineHours: request.body.sunshineHours,
     description: request.body.description,
+    // isAvailable: request.body.isAvailable,
   });
   newEmplacement
     .save()

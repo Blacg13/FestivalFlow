@@ -4,3 +4,6 @@ p {
 d.minidiv {
     border: solid 5px blue;
 }
+.hiddenput {
+    display: block;
+}
