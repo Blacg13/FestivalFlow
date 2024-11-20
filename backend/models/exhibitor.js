@@ -30,21 +30,21 @@ const ExhibitorSchema = new Schema({
     disappointed: Boolean, //no more interested
     banished: Boolean,
   },
-  //*application + steps :
-  // steps: {
-  //   step1interest: Boolean,
-  //   step2needInfo: Boolean,
-  //   step3contract: {
-  //     contractReceived: Boolean,
-  //     contractSend: Boolean,
-  //     contractInOrder: Boolean,
-  //   },
-  //   step4payment: { paymentReceived: Boolean, paymentAnnounced: Boolean },
-  //   step5advertOnWebsite: Boolean,
-  //   step6welcoming: Boolean,
-  //   step7refund: Boolean,
-  //   step8recontactNextYear: Boolean,
-  // },
+  steps: {
+    step1interest: Boolean,
+    step2needInfo: Boolean,
+    step3contract: {
+      contractReceived: Boolean,
+      contractSend: Boolean,
+      contractInOrder: Boolean,
+    },
+    step4payment: { paymentReceived: Boolean, paymentAnnounced: Boolean },
+    step5advertOnWebsite: Boolean,
+    step6welcoming: Boolean,
+    step7refund: Boolean,
+    step8recontactNextYear: Boolean,
+  },
+  //*application
   applicationRef: [
     {
       type: Schema.Types.ObjectId,

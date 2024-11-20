@@ -1,6 +1,7 @@
 .pfooter {
     display: flex;
     justify-content: center;
+    min-width: 1300px; /*todo: harmoniser dans une variable avec le body*/
     padding: 30px;
     padding-bottom: 0;
     margin-bottom: 0;

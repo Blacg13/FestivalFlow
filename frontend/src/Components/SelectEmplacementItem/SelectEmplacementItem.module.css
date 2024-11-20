@@ -1,0 +1,28 @@
+.selectEmplacementDiv {
+    background-color: #f5f5f5;
+    display: flex;
+    gap: 20px;
+}
+.select {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    appearance: none;
+    display: inline-flexbox;
+    font-size: var(--font-size);
+    font-family: var(--text-font);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+    min-width: 70px;
+    &:hover {
+        background-color: transparent;
+        border: none;
+    }
+}
+.optgroup {
+    font-style: normal;
+    font-weight: var(--font-weight);
+    /* font-family: var(--title-font); */
+    display: inline-block;
+}

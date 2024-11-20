@@ -1,16 +1,14 @@
 import React from 'react';
-import style from './ApplicationModule.module.css';
+import style from './SelectEmplacementItem.module.css';
 import useSWR from 'swr';
 import { fetchEmplacements } from '../../Services/fetchEmplacements.js';
 
-const ApplicationModule = () => {
+const SelectEmplacementItem = () => {
   const { data, isLoading, error } = useSWR('emplacements', fetchEmplacements);
-  // const test = await fetchEmplacements();
-  console.log('test', data, isLoading);
 
   if (isLoading || !data) {
     return (
-      <div className='spinner'>
+      <div className='isLoading'>
         <p>Chargement...</p>
       </div>
     );
@@ -20,20 +18,24 @@ const ApplicationModule = () => {
 
   return (
     <>
-      <div className={style.applicationModuleBG}>
+      <div className={style.selectEmplacementDiv}>
         <label htmlFor='emplacement'>Emplacement :</label>
         <select className={style.select} name='emplacement' id='emplacement'>
           {Array.from(theEmplacementsOfDeath.entries()).map(
             ([empKey, empVal]) => {
-              console.log('key', empKey);
-
-              //it's dead T_T
               return (
-                <optgroup key={empKey} label={empKey}>
+                <optgroup
+                  className={style.optgroup}
+                  key={empKey}
+                  label={empKey}
+                >
                   {empVal.map((emp) => {
-                    console.log('val', emp);
                     return (
-                      <option key={empKey + '-' + emp.name} value={emp.name}>
+                      <option
+                        className={style.option}
+                        key={empKey + '-' + emp.name}
+                        value={emp.name}
+                      >
                         {emp.name}
                       </option>
                     );
@@ -47,4 +49,4 @@ const ApplicationModule = () => {
     </>
   );
 };
-export default ApplicationModule;
+export default SelectEmplacementItem;

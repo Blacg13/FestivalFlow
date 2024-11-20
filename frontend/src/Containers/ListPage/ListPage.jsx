@@ -1,11 +1,11 @@
-import ApplicationModule from '../../Components/ApplicationModule/ApplicationModule';
+import ExhibitorList from '../../Components/ExhibitorList/ExhibitorList';
+import SelectEmplacementItem from '../../Components/SelectEmplacementItem/SelectEmplacementItem';
 import AccordionItem from '../../Components/AccordionItem/AccordionItem';
 const List = () => {
   return (
     <>
-      <>
-        <ApplicationModule />
-      </>
+      <>{/* <SelectEmplacementItem /> */}</>
+      <ExhibitorList format={'div'} />
     </>
   );
 };

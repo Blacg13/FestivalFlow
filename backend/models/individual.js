@@ -5,7 +5,7 @@ const IndividualSchema = new Schema({
   name: { first: String, last: String },
   contact: {
     email: [String],
-    phone: [String],
+    phone: [Number],
     adress: [String],
     socialMedia: [String],
     webSite: [String],
