@@ -1,5 +1,5 @@
-import ProgressBar from '../../Components/ProgressBar/ProgressBar';
-import NavBar from '../../Components/NavBar/NavBar';
+import ProgressBar from './ProgressBar/ProgressBar';
+import NavBar from './NavBar/NavBar';
 import style from './Header.module.css';
 const Header = () => {
   return (

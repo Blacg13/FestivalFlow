@@ -1,10 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
-import NotFoundPage from './Containers/NotFoundPage/NotFoundPage';
-import ListPage from './Containers/ListPage/ListPage';
-import MapPage from './Containers/MapPage/MapPage';
-import CommitteePage from './Containers/CommitteePage/CommitteePage';
-import ArchivesPage from './Containers/ArchivesPage/ArchivesPage';
+import NotFoundPage from './pages/NotFoundPage';
+import ListPage from './pages/ListPage';
+import MapPage from './pages/MapPage';
+import CommitteePage from './pages/CommitteePage';
+import ArchivesPage from './pages/ArchivesPage';
+import ConnexionPage from './pages/ConnexionPage';
 
 //todo: debug routes */
 
@@ -15,7 +16,7 @@ const routes = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <ListPage />,
+        element: <ConnexionPage />,
         //todo: <ConnexionPage />
       },
       {
