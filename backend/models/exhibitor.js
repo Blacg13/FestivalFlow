@@ -8,6 +8,7 @@ const ExhibitorSchema = new Schema({
   businessName: String,
   job: String,
   specialty: String,
+  image: String,
   personRef: [
     //^[child]: Individual
     {

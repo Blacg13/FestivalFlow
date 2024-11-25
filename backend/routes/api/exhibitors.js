@@ -19,6 +19,7 @@ router.post('/', (request, response) => {
     businessName: request.body.businessName, //String
     job: request.body.job, //String
     specialty: request.body.specialty, //String
+    image: request.body.image, //String
     personRef: request.body.personRef, //^>Child
     contact: {
       email: request.body.email, //[String]

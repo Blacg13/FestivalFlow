@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import style from './NavBar.module.css';
-import img_navbar_list from '../../images/navbar-list.png';
-import img_navbar_map from '../../images/navbar-map.png';
-import img_navbar_committee from '../../images/navbar-committee.png';
-import img_navbar_archives from '../../images/navbar-archives.png';
+import img_navbar_list from '../../assets/images/icons/navbar-list.png';
+import img_navbar_map from '../../assets/images/icons/navbar-map.png';
+import img_navbar_committee from '../../assets/images/icons/navbar-committee.png';
+import img_navbar_archives from '../../assets/images/icons/navbar-archives.png';
 const NavBar = () => {
   return (
     <ul className={style.navbar}>

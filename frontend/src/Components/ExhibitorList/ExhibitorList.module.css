@@ -1,21 +1,59 @@
-.exhibitorListDefault {
-    background-color: azure;
+.formatDefault {
+    /* background-color: var(--pale-color); */
     padding: 15px;
     display: flex;
     flex-flow: column nowrap;
     gap: var(--gap-items);
 }
-.exhibitorListDiv {
-    background-color: azure;
+.formatDiv {
+    /* background-color: var(--pale-color); */
     padding: 10px;
     display: flex;
     flex-flow: row wrap;
     gap: var(--gap-items); /*! bugging*/
-}
-.exhibitorLI {
-    margin: 15px; /*! to clean */
-    background-color: rgb(230, 205, 205);
-    border-radius: var(--border-radius-items);
-    min-height: 150px;
-    min-width: 300px;
+
+    .exhibitorLI {
+        width: 300px;
+        height: 200px;
+        margin: 15px; /*! to clean */
+        background-color: var(--pale-color);
+        border-radius: var(--border-radius-items);
+        min-height: 150px;
+        min-width: 300px;
+        /* box-shadow: inset 2px 2px 40px 0px var(--dark-color); */
+        &:hover {
+            box-shadow: 6px 6px 20px 1px var(--dark-color);
+            
+        }
+        &:active {
+            box-shadow: inset 2px 2px 75px 1px var(--dark-color);
+        }
+    .exitem {
+        display: block;
+
+        .exitemHeader {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 8px;
+
+            .exhibitorIcon {
+                height: 64px;
+            }
+
+            .exitemHeaderTitles {
+                border: transparent;
+            }
+        }
+
+        .exitemContent {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 8px;
+            
+            .step {
+                height: 32px;
+            }
+        }
+    }
+    }
 }
