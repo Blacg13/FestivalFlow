@@ -13,11 +13,6 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
     isLoading: exhibitorsIsLoading,
     error: exhibitorsError,
   } = useSWR('exhibitors', fetchExhibitors);
-  const {
-    data: individualsData,
-    isLoading: individualsIsLoading,
-    error: individualsError,
-  } = useSWR('individuals', fetchIndividuals);
 
   if (exhibitorsIsLoading || individualsIsLoading) {
     return (

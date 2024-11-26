@@ -36,14 +36,14 @@
   /**pages colors*/
   --far-bg-color: #2a2c31;
   --close-bg-color: #F8FCDA;
-  --active-color: #B0D7FF;
+  --active-color: #c9cced; /*complementary from pale_color : #aab0ee*/
   --list-bg-color: #F8FCDA;
   --map-bg-color: #B0D7FF;
   --comittee-bg-color: #efdc81 ;
   --archives-bg-color: #9CC9A2;
   /**items colors*/
   --dark-color: #b18820;
-  --pale-color: palegoldenrod;
+  --pale-color: #eee8aa; /*palegoldenrod*/
   --red-pale : #ebd1d4;
   /**others*/
     --title-font: "Inknut Antiqua";
