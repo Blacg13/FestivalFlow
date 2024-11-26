@@ -10,7 +10,6 @@ const ExhibitorSchema = new Schema({
   specialty: String,
   image: String,
   personRef: [
-    //^[child]: Individual
     {
       type: Schema.Types.ObjectId,
       ref: 'Individual',

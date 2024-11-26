@@ -3,7 +3,6 @@ const router = express.Router();
 
 const Individual = require('../../models/individual');
 
-//todo: à tester
 //* @route    GET api/individuals
 //  @desc     Get All Individuals
 //  @access   Public

@@ -7,7 +7,15 @@ const Exhibitor = require('../../models/exhibitor');
 //  @desc     Get All Exhibitors
 //  @access   Public
 router.get('/', (request, response) => {
-  Exhibitor.find().then((exhibitors) => response.json(exhibitors));
+  Exhibitor.find()
+    // .populate('personRef1')
+    // // .populate('personRef2')
+    // // .populate('personRef3')
+    // // .populate('personRef4')
+    // // .populate('personRef5')
+    // // .populate('applicationRef')
+    // .exec()
+    .then((exhibitors) => response.json(exhibitors));
 });
 
 //todo: à tester

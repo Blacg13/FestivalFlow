@@ -1,0 +1,22 @@
+.lastEmail {
+    padding: 16px;
+    border-radius: var(--border-radius-items);
+    background-color: chocolate;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-content: center;
+    gap: 16px;
+    width: 270px;
+    height: 50px;
+    
+    img {
+        height: 32px;
+        align-self: center;
+        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+        /*? cf: https://isotropic.co/tool/hex-color-to-css-filter/ */
+    }
+    p {
+        align-self: center;
+    }
+}

@@ -13,8 +13,13 @@
     gap: var(--gap-items); /*! bugging*/
 
     .exhibitorLI {
-        width: 300px;
-        height: 200px;
+        padding: 16px;
+        width: 250px;
+        height: 175px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
         margin: 15px; /*! to clean */
         background-color: var(--pale-color);
         border-radius: var(--border-radius-items);
@@ -42,16 +47,6 @@
 
             .exitemHeaderTitles {
                 border: transparent;
-            }
-        }
-
-        .exitemContent {
-            display: flex;
-            flex-flow: row nowrap;
-            gap: 8px;
-            
-            .step {
-                height: 32px;
             }
         }
     }

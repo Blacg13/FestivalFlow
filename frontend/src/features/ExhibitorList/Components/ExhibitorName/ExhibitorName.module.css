@@ -1,0 +1,16 @@
+.exhibitorName {
+    padding: 8px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 16px;
+
+    img {
+        height: 64px;
+
+    }
+    .titles {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+}

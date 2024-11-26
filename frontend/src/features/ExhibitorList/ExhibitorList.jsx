@@ -3,6 +3,8 @@ import style from './ExhibitorList.module.css';
 import useSWR from 'swr';
 import { fetchExhibitors } from '../../Services/fetchExhibitors.js';
 import { fetchIndividuals } from '../../Services/fetchIndividuals.js';
+import LastEmail from './Components/LastEmail/LastEmail.jsx';
+import ExhibitorName from './Components/ExhibitorName/ExhibitorName.jsx';
 // import { img } from '/public/exhibitors-icons/';
 
 const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
@@ -48,41 +50,23 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
   //   setOrder(order);
   //   console.log('order defined', order);
   // };
+
   switch (format) {
     case 'div':
       return (
         <ul className={style.formatDiv}>
           {exhibitorsData.map((exhibitor) => {
-            console.log(
-              '/public/exhibitors-icons/' +
-                exhibitor.job +
-                '-icons/' +
-                exhibitor.image
-            );
+            console.log('exhibitor: ', exhibitor);
+
+            //! bugging
             return (
               <li key={exhibitor._id} className={style.exhibitorLI}>
                 <div className={style.exitem}>
-                  <div className={style.exitemHeader}>
-                    <img
-                      className={style.exhibitorIcon}
-                      src={`/public/exhibitors-icons/${exhibitor.job}-icons/${exhibitor.image}`}
-                      alt={'image pour ' + exhibitor.specialty}
-                    />
-                    <div className={style.exitemHeaderTitles}>
-                      <h3>
-                        {exhibitor.businessName ?? exhibitor.personRef.name}
-                      </h3>
-                      <h4>{exhibitor.specialty}</h4>
-                    </div>
-                  </div>
-                  <div className={style.exitemContent}>
-                    <img
-                      className={style.step}
-                      src={`/public/icons-steps/icons_step_yes.svg`}
-                      alt={'pouet'}
-                    />
-                    <p>{exhibitor.description}</p>
-                  </div>
+                  <ExhibitorName
+                    exhibitor={exhibitor}
+                    individual={exhibitor.personRef}
+                  />
+                  <LastEmail exhibitor={exhibitor} />
                 </div>
               </li>
             );
