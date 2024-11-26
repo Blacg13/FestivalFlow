@@ -1,4 +1,5 @@
 .exhibitorName {
+    height: 100px;
     padding: 8px;
     display: flex;
     flex-flow: row nowrap;
@@ -6,11 +7,26 @@
 
     img {
         height: 64px;
-
+        align-self: center;
     }
     .titles {
         display: flex;
         flex-flow: column nowrap;
+
+        h3 {
+            /* font-size: 14px; */
+            display: block;
+
+            i {
+                font-style: normal;
+                font-weight: 500;
+            }
+        }
+        h4 {
+            /* font-size: 14px; */
+            /* font-family: var(--text-font); */
+            font-weight: 400;
+        }
     }
 
 }

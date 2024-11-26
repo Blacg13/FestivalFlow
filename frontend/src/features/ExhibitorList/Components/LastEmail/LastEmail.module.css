@@ -1,5 +1,5 @@
 .lastEmail {
-    padding: 16px;
+    padding: 8px;
     border-radius: var(--border-radius-items);
     background-color: chocolate;
     display: flex;
@@ -8,7 +8,7 @@
     align-content: center;
     gap: 16px;
     width: 270px;
-    height: 50px;
+    height: 40px;
     
     img {
         height: 32px;

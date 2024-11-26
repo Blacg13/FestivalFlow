@@ -6,10 +6,9 @@
     gap: var(--gap-items);
 }
 .formatDiv {
-    /* background-color: var(--pale-color); */
     padding: 10px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap; /*cause du débordement lorsque une seule colonne (!)*/
     gap: var(--gap-items); /*! bugging*/
 
     .exhibitorLI {
@@ -20,35 +19,25 @@
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        margin: 15px; /*! to clean */
         background-color: var(--pale-color);
         border-radius: var(--border-radius-items);
         min-height: 150px;
         min-width: 300px;
-        /* box-shadow: inset 2px 2px 40px 0px var(--dark-color); */
+        box-shadow: 3px 3px 10px 1px var(--dark-color);
         &:hover {
-            box-shadow: 6px 6px 20px 1px var(--dark-color);
-            
+            box-shadow: inset 2px 2px 40px 0px var(--dark-color);
+            background-color: var(--active-color);
         }
         &:active {
             box-shadow: inset 2px 2px 75px 1px var(--dark-color);
+            background-color: var(--active-color);
+            filter: brightness(110%);
         }
     .exitem {
-        display: block;
-
-        .exitemHeader {
-            display: flex;
-            flex-flow: row nowrap;
-            gap: 8px;
-
-            .exhibitorIcon {
-                height: 64px;
-            }
-
-            .exitemHeaderTitles {
-                border: transparent;
-            }
-        }
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
     }
     }
 }

@@ -8,13 +8,8 @@ const Exhibitor = require('../../models/exhibitor');
 //  @access   Public
 router.get('/', (request, response) => {
   Exhibitor.find()
-    // .populate('personRef1')
-    // // .populate('personRef2')
-    // // .populate('personRef3')
-    // // .populate('personRef4')
-    // // .populate('personRef5')
-    // // .populate('applicationRef')
-    // .exec()
+    .populate('personRef')
+    // .populate('applicationRef')
     .then((exhibitors) => response.json(exhibitors));
 });
 

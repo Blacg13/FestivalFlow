@@ -18,7 +18,8 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
     isLoading: individualsIsLoading,
     error: individualsError,
   } = useSWR('individuals', fetchIndividuals);
-  if (exhibitorsIsLoading && individualsIsLoading) {
+
+  if (exhibitorsIsLoading || individualsIsLoading) {
     return (
       <div className='isLoading'>
         <p>Chargement...</p>
@@ -32,8 +33,8 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
       </div>
     );
   } else {
-    console.log('exhibitors list: ', exhibitorsData);
-    console.log(exhibitorsData.personRef);
+    console.log('OK: no error no loading');
+    // console.log(exhibitorsData.personRef);
   }
   // const [filter, setFilter] = useState(undefined);
   // const [sort, setSort] = useState(undefined);
@@ -57,7 +58,6 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
         <ul className={style.formatDiv}>
           {exhibitorsData.map((exhibitor) => {
             console.log('exhibitor: ', exhibitor);
-
             //! bugging
             return (
               <li key={exhibitor._id} className={style.exhibitorLI}>
