@@ -4,8 +4,6 @@
     min-height: 30px;
     box-shadow: 3px 3px 10px 0.2px var(--dark-color);
     border: solid 7px var(--pale-color);
-    --dark-color: #b18820;
-    --pale-color: palegoldenrod;
 }
 .noteOpenStyle {
     background-color: var(--dark-color);

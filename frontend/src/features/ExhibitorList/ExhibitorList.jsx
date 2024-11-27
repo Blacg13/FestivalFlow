@@ -2,10 +2,9 @@ import React from 'react';
 import style from './ExhibitorList.module.css';
 import useSWR from 'swr';
 import { fetchExhibitors } from '../../Services/fetchExhibitors.js';
-import { fetchIndividuals } from '../../Services/fetchIndividuals.js';
 import LastEmail from './Components/LastEmail/LastEmail.jsx';
 import ExhibitorName from './Components/ExhibitorName/ExhibitorName.jsx';
-// import { img } from '/public/exhibitors-icons/';
+import AddExhibitor from './Components/AddExhibitor/AddExhibitor.jsx';
 
 const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
   const {
@@ -14,13 +13,13 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
     error: exhibitorsError,
   } = useSWR('exhibitors', fetchExhibitors);
 
-  if (exhibitorsIsLoading || individualsIsLoading) {
+  if (exhibitorsIsLoading) {
     return (
       <div className='isLoading'>
         <p>Chargement...</p>
       </div>
     );
-  } else if (exhibitorsError || individualsError) {
+  } else if (exhibitorsError) {
     console.log(error.status + error.message);
     return (
       <div className='fetchError'>
@@ -66,6 +65,11 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
               </li>
             );
           })}
+          <li className={style.exhibitorLI}>
+            <div className={style.exitem}>
+              <AddExhibitor />
+            </div>
+          </li>
         </ul>
       );
       break;

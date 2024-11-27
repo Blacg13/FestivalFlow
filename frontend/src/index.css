@@ -3,6 +3,15 @@
   margin: 0;
   list-style-type: none;
   text-decoration: none;
+  /**scrollbar*/
+  scroll-behavior: smooth;
+  scrollbar-color: var(--hover-color) transparent;
+  scroll-margin: var(--little-gap);
+  /**selection*/
+  &::selection {
+    background-color: var(--active-color);
+    color: var(--pale-color);
+  }
   a {
     color: inherit;
   }
@@ -36,23 +45,31 @@
   /**pages colors*/
   --far-bg-color: #2a2c31;
   --close-bg-color: #F8FCDA;
-  --active-color: #c9cced; /*complementary from pale_color : #aab0ee*/
   --list-bg-color: #F8FCDA;
   --map-bg-color: #B0D7FF;
   --comittee-bg-color: #efdc81 ;
   --archives-bg-color: #9CC9A2;
   /**items colors*/
-  --dark-color: #b18820;
+  --hover-color: #e3e4f3;
+  --active-color: chocolate;
+  /* --> complementary from pale_color : #aab0ee */
   --pale-color: #eee8aa; /*palegoldenrod*/
+  --dark-color: #b18820;
+  /**maybe ?*/
   --red-pale : #ebd1d4;
-  /**others*/
+  /**font*/
     --title-font: "Inknut Antiqua";
     --text-font: "Maitree";
     --font-size: 16px;
     --font-weight: 400;
     --line-height: 30px;
+  /**positionning*/
     --border-radius-items: 15px; /*todo: harmoniser*/
-    --gap-items: 15px; /*todo: harmoniser*/
+    --gap-items: 32px; /*todo: harmoniser*/
+    --very-large-gap: 64px;
+    --large-gap: 32px;
+    --medium-gap: 16px;
+    --little-gap: 8px;
   /*^======================================*/
   min-width: 700px; /*! */
   font-family: "Maitree", "Inknut Antiqua";
@@ -75,9 +92,6 @@ p {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--title-font);
   user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
 }
 .miniInput {
   border: none;
