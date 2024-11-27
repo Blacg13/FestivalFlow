@@ -1,0 +1,4 @@
+.exhibitorSearchBar {
+    padding: var(--medium-gap);
+    background-color: darkred;
+}
