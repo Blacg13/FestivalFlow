@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import NotFoundPage from './pages/NotFoundPage';
 import ListPage from './pages/ListPage';
+import ExhibitorPage from './pages/ExhibitorPage';
 import MapPage from './pages/MapPage';
 import CommitteePage from './pages/CommitteePage';
 import ArchivesPage from './pages/ArchivesPage';
@@ -22,6 +23,7 @@ const routes = createBrowserRouter([
       {
         path: '/list',
         element: <ListPage />,
+        // children: [{ path: '/exhibitor/:id', element: <ExhibitorPage /> }],
       },
       {
         path: 'map',

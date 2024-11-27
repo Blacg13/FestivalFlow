@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import style from './ExhibitorList.module.css';
 import useSWR from 'swr';
 import { fetchExhibitors } from '../../Services/fetchExhibitors.js';
+import IsLoading from '../../shared/IsLoading/IsLoading.jsx';
+import Error from '../../shared/Error/Error.jsx';
 import LastEmail from './Components/LastEmail/LastEmail.jsx';
 import ExhibitorName from './Components/ExhibitorName/ExhibitorName.jsx';
 import AddExhibitor from './Components/AddExhibitor/AddExhibitor.jsx';
@@ -9,27 +12,13 @@ import AddExhibitor from './Components/AddExhibitor/AddExhibitor.jsx';
 const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
   const {
     data: exhibitorsData,
-    isLoading: exhibitorsIsLoading,
-    error: exhibitorsError,
+    isLoading,
+    error,
   } = useSWR('exhibitors', fetchExhibitors);
 
-  if (exhibitorsIsLoading) {
-    return (
-      <div className='isLoading'>
-        <p>Chargement...</p>
-      </div>
-    );
-  } else if (exhibitorsError) {
-    console.log(error.status + error.message);
-    return (
-      <div className='fetchError'>
-        <p>Il semblerait qu'il y ait eu une erreur...</p>
-      </div>
-    );
-  } else {
-    console.log('OK: no error no loading');
-    // console.log(exhibitorsData.personRef);
-  }
+  if (isLoading) return <IsLoading />;
+  if (error) return <Error />;
+
   // const [filter, setFilter] = useState(undefined);
   // const [sort, setSort] = useState(undefined);
   // const [order, setOrder] = useState(undefined);
@@ -51,21 +40,26 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
       return (
         <ul className={style.formatDiv}>
           {exhibitorsData.map((exhibitor) => {
-            console.log('exhibitor: ', exhibitor);
-            //! bugging
             return (
-              <li key={exhibitor._id} className={style.exhibitorLI}>
-                <div className={style.exitem}>
-                  <ExhibitorName
-                    exhibitor={exhibitor}
-                    individual={exhibitor.personRef}
-                  />
-                  <LastEmail exhibitor={exhibitor} />
-                </div>
+              <li key={'ExhibitorLIdiv_' + exhibitor._id}>
+                <Link
+                  key={'ExhibitorLink_' + exhibitor._id}
+                  to={'/exhibitor/' + exhibitor._id}
+                  className={style.exhibitorLI}
+                >
+                  <div className={style.exitem}>
+                    <ExhibitorName
+                      exhibitor={exhibitor}
+                      individual={exhibitor.personRef}
+                    />
+                    <LastEmail exhibitor={exhibitor} />
+                  </div>
+                </Link>
               </li>
             );
           })}
-          <li className={style.exhibitorLI}>
+          {/* todo: ajouter <Link to> vers le formulaire */}
+          <li key={'AddExhibitor'} className={style.exhibitorLI}>
             <div className={style.exitem}>
               <AddExhibitor />
             </div>
@@ -79,7 +73,7 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
         <ul className={style.formatDefault}>
           {exhibitorsData.map((exhibitor) => {
             return (
-              <li key={exhibitor.id}>
+              <li key={'ExhibitorLIp_' + exhibitor.id}>
                 <div>
                   <p>pouet pouet</p>
                 </div>

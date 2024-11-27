@@ -1,6 +1,7 @@
 import style from './LastEmail.module.css';
 import useSWR from 'swr';
 const LastEmail = ({ exhibitor, email = 'FFM2025: lkjfehzkjergfjlkds' }) => {
+  //todo : mettre en place l'api des emails... Plein de courage !!
   // const {
   //   data: exhibitorsData,
   //   isLoading: exhibitorsIsLoading,
@@ -14,4 +15,3 @@ const LastEmail = ({ exhibitor, email = 'FFM2025: lkjfehzkjergfjlkds' }) => {
   );
 };
 export default LastEmail;
-//todo : mettre en place l'api des emails... Plein de courage !!

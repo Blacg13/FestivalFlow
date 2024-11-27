@@ -7,30 +7,30 @@ import img_navbar_archives from '../../../assets/images/icons/navbar-archives.pn
 const NavBar = () => {
   return (
     <ul className={style.navbar}>
-      <Link to={'/list'}>
-        <li className={'listPage'}>
+      <li className={'listPage'}>
+        <Link className={style.link} to={'/list'}>
           <p>Exposants</p>
           <img src={img_navbar_list} alt='Home icon' />
-        </li>
-      </Link>
-      <Link to={'/map'}>
-        <li className={'mapPage'}>
+        </Link>
+      </li>
+      <li className={'mapPage'}>
+        <Link className={style.link} to={'/map'}>
           <p>Emplacements</p>
           <img src={img_navbar_map} alt='Map icon' />
-        </li>
-      </Link>
-      <Link to={'/committee'}>
-        <li className={'committeePage'}>
+        </Link>
+      </li>
+      <li className={'committeePage'}>
+        <Link className={style.link} to={'/committee'}>
           <p>Comité</p>
           <img src={img_navbar_committee} alt='Committee icon' />
-        </li>
-      </Link>
-      <Link to={'/archives'}>
-        <li className={'archivesPage'}>
+        </Link>
+      </li>
+      <li className={'archivesPage'}>
+        <Link className={style.link} to={'/archives'}>
           <p>Archives</p>
           <img src={img_navbar_archives} alt='Archives icon' />
-        </li>
-      </Link>
+        </Link>
+      </li>
     </ul>
   );
 };

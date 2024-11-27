@@ -1,23 +1,27 @@
 .navbar {
     display: flex;
     column-gap: 20px;
+
     li {
-        width: 280px;
-        height: 30px;
-        padding: 10px;
-        display: flex;
-        flex-flow: row-reverse nowrap;
-        justify-content: center;
-        gap: 15px;
-        align-items: center;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
-        img {
-            height: 32px;
-        }
-        p {
-            font: var(--title-font);
-            font-size: 28px;
+        .link {
+            display: flex;
+            flex-flow: row-reverse nowrap;
+            justify-content: center;
+            gap: var(--medium-gap);
+            align-items: center;
+            width: 280px;
+            height: 30px;
+            padding: 10px;
+            
+            img {
+                height: 32px;
+            }
+            p {
+                font: var(--title-font);
+                font-size: 28px;
+            }
         }
     }
 }

@@ -1,12 +1,7 @@
 import style from './ExhibitorName.module.css';
-import useSWR from 'swr';
-import { fetchExhibitors } from '/src/services/fetchExhibitors.js';
-import { fetchIndividuals } from '/src/services/fetchIndividuals.js';
-import { json } from 'react-router-dom';
 
 const ExhibitorName = ({ exhibitor }) => {
   const personRef = exhibitor.personRef.map((individual) => individual);
-  console.log('personRef : ' + personRef[0].name.first);
   //! attention, je dois pouvoir mettre la personne de référence en index 0 alors !!
   return (
     <div className={style.exhibitorName}>

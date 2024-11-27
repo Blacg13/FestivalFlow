@@ -1,6 +1,6 @@
 import Header from '../shared/Header/Header';
 import Footer from '../shared/Footer/Footer';
-import ExhibitorSearchBar from '../features/ExhibitorSearchBar/ExhibitorSearchBar';
+// import ExhibitorSearchBar from '../features/ExhibitorSearchBar/ExhibitorSearchBar';
 import ExhibitorList from '../features/ExhibitorList/ExhibitorList';
 const List = () => {
   return (
