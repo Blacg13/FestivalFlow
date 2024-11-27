@@ -6,6 +6,7 @@
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
         .link {
+            /* border: solid 10px red; */
             display: flex;
             flex-flow: row-reverse nowrap;
             justify-content: center;
@@ -14,6 +15,7 @@
             width: 280px;
             height: 30px;
             padding: 10px;
+            border-radius: 25px;
             
             img {
                 height: 32px;
@@ -21,6 +23,13 @@
             p {
                 font: var(--title-font);
                 font-size: 28px;
+            }
+
+            &:hover {
+                    /* background-image: linear-gradient(180deg, transparent, var(--hover-color) 90%); */
+                    /* background-image: radial-gradient(var(--hover-color), transparent 40%); */
+                    /* box-shadow: inset 2px 40px 40px 1px var(--pale-color); */
+                    filter: brightness(200%);
             }
         }
     }

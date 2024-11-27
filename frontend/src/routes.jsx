@@ -21,9 +21,9 @@ const routes = createBrowserRouter([
         //todo: <ConnexionPage />
       },
       {
-        path: '/list',
+        path: '/exhibitors',
         element: <ListPage />,
-        // children: [{ path: '/exhibitor/:id', element: <ExhibitorPage /> }],
+        children: [{ path: '/exhibitors/:slug', element: <ExhibitorPage /> }],
       },
       {
         path: 'map',

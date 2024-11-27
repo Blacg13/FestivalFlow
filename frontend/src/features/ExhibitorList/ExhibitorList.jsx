@@ -8,6 +8,7 @@ import Error from '../../shared/Error/Error.jsx';
 import LastEmail from './Components/LastEmail/LastEmail.jsx';
 import ExhibitorName from './Components/ExhibitorName/ExhibitorName.jsx';
 import AddExhibitor from './Components/AddExhibitor/AddExhibitor.jsx';
+import slugify from '../../shared/utils/slugify.js';
 
 const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
   const {
@@ -40,11 +41,20 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
       return (
         <ul className={style.formatDiv}>
           {exhibitorsData.map((exhibitor) => {
+            const slug = slugify(
+              exhibitor.personRef[0].name.first +
+                ' ' +
+                exhibitor.personRef[0].name.last +
+                ' ' +
+                (exhibitor.businessName ?? exhibitor.specialty)
+            );
+            console.log('slug', slug);
             return (
               <li key={'ExhibitorLIdiv_' + exhibitor._id}>
                 <Link
                   key={'ExhibitorLink_' + exhibitor._id}
-                  to={'/exhibitor/' + exhibitor._id}
+                  to={'/exhibitors/' + slug}
+                  state={exhibitor._id}
                   className={style.exhibitorLI}
                 >
                   <div className={style.exitem}>

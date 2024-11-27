@@ -1,11 +1,13 @@
 import { useParams } from 'react-router-dom';
 import Header from '../shared/Header/Header';
 import Footer from '../shared/Footer/Footer';
+import slugify from '../shared/utils/slugify';
 import useSWR from 'swr';
 import { useState } from 'react';
 import { fetchExhibitors } from '../Services/fetchExhibitors';
 const ExhibitorPage = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
+  //! débugger
   const [exhibitor, setExhibitor] = useState(null);
   const {
     data: exhibitorsData,
@@ -29,7 +31,7 @@ const ExhibitorPage = () => {
       <Header />
       <main className='listPage'>
         <h2>ExhibitorPage</h2>
-        <p>{id}</p>
+        <p>{slug}</p>
       </main>
       <Footer />
     </>

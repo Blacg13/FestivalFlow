@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <ul className={style.navbar}>
       <li className={'listPage'}>
-        <Link className={style.link} to={'/list'}>
+        <Link className={style.link} to={'/exhibitors'}>
           <p>Exposants</p>
           <img src={img_navbar_list} alt='Home icon' />
         </Link>
