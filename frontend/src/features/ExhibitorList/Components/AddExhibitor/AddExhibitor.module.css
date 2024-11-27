@@ -1,0 +1,34 @@
+:root {
+    --longueur-plus: 50px;
+    --largeur-plus: 10px;
+}
+.plusSymbol {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: var(--active-color);
+    border-radius: 50%;
+    padding: 8px;
+    margin: 12px;
+
+    .plusVertical {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: var(--longueur-plus);
+        width: var(--largeur-plus);
+        background-color: var(--pale-color);
+        border-radius: var(--border-radius-items);
+    }
+    .plusHorizontal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: var(--largeur-plus);
+        width: var(--longueur-plus);
+        background-color: var(--pale-color);
+        border-radius: var(--border-radius-items);
+    }
+}
