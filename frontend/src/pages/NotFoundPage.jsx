@@ -4,7 +4,7 @@ const NotFoundPage = () => {
   return (
     <>
       <Header />
-      <main>
+      <main className='listPage'>
         <h2>Page not found</h2>
       </main>
       <Footer />

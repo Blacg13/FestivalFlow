@@ -48,12 +48,11 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
                 ' ' +
                 (exhibitor.businessName ?? exhibitor.specialty)
             );
-            console.log('slug', slug);
             return (
               <li key={'ExhibitorLIdiv_' + exhibitor._id}>
                 <Link
-                  key={'ExhibitorLink_' + exhibitor._id}
-                  to={'/exhibitors/' + slug}
+                  // to={'/exhibitors/' + exhibitor._id}
+                  to={'/' + slug}
                   state={exhibitor._id}
                   className={style.exhibitorLI}
                 >

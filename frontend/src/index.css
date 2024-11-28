@@ -100,9 +100,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 /**page colors:*/
 main {
-  margin-top: 20px;
-  /* padding: 30px; pour cause de débordement ^^ */
+  min-width: 1230px;
   min-height: 600px;
+  padding: 30px;
+  margin-top: 20px;
   border-top-right-radius: 3px;
   border-bottom: 3px;
   }

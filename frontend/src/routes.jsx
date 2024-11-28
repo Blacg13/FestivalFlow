@@ -23,7 +23,11 @@ const routes = createBrowserRouter([
       {
         path: '/exhibitors',
         element: <ListPage />,
-        children: [{ path: '/exhibitors/:slug', element: <ExhibitorPage /> }],
+        // children: [{ path: `/exhibitors/:slug`, element: <ExhibitorPage /> }],
+      },
+      {
+        path: '/:slug',
+        element: <ExhibitorPage />,
       },
       {
         path: 'map',
