@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './ExhibitorList.module.css';
 import useSWR from 'swr';
-import { fetchExhibitors } from '../../Services/fetchExhibitors.js';
-import IsLoading from '../../shared/IsLoading/IsLoading.jsx';
-import Error from '../../shared/Error/Error.jsx';
-import LastEmail from './Components/LastEmail/LastEmail.jsx';
-import ExhibitorName from './Components/ExhibitorName/ExhibitorName.jsx';
-import AddExhibitor from './Components/AddExhibitor/AddExhibitor.jsx';
-import slugify from '../../shared/utils/slugify.js';
+import { fetchExhibitors } from '../../../services/fetchExhibitors.js';
+import IsLoading from '../../../shared/IsLoading/IsLoading.jsx';
+import Error from '../../../shared/Error/Error';
+import LastEmail from '../LastEmail/LastEmail';
+import ExhibitorName from '../ExhibitorName/ExhibitorName';
+import AddExhibitor from '../AddExhibitor/AddExhibitor';
+import slugify from '../../../shared/utils/slugify.js';
 
 const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
   const {
@@ -57,11 +57,8 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
                   className={style.exhibitorLI}
                 >
                   <div className={style.exitem}>
-                    <ExhibitorName
-                      exhibitor={exhibitor}
-                      individual={exhibitor.personRef}
-                    />
-                    <LastEmail exhibitor={exhibitor} />
+                    <ExhibitorName thisExhibitor={exhibitor} />
+                    <LastEmail thisExhibitor={exhibitor} />
                   </div>
                 </Link>
               </li>

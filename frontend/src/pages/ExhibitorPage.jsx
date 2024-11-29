@@ -3,7 +3,7 @@ import Header from '../shared/Header/Header';
 import Footer from '../shared/Footer/Footer';
 import useSWR from 'swr';
 import { fetchExhibitors } from '../Services/fetchExhibitors';
-import ExhibitorInfos from '../features/ExhibitorInfos/ExhibitorInfos';
+import ExhibitorInfos from '../features/ExhibitorFeature/ExhibitorInfos/ExhibitorInfos';
 import IsLoading from '../shared/IsLoading/IsLoading';
 import Error from '../shared/Error/Error';
 import { useEffect } from 'react';

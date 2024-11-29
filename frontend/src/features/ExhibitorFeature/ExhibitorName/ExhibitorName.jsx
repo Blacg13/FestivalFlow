@@ -1,19 +1,19 @@
 import style from './ExhibitorName.module.css';
 
-const ExhibitorName = ({ exhibitor }) => {
-  const personRef = exhibitor.personRef.map((individual) => individual);
+const ExhibitorName = ({ thisExhibitor }) => {
+  const personRef = thisExhibitor.personRef.map((individual) => individual);
   //! attention, je dois pouvoir mettre la personne de référence en index 0 alors !!
   return (
     <div className={style.exhibitorName}>
       <img
         className={style.exhibitorIcon}
-        src={`/public/exhibitors-icons/${exhibitor.job}-icons/${exhibitor.image}`}
-        alt={'image pour ' + exhibitor.specialty}
+        src={`/exhibitors-icons/${thisExhibitor.job}-icons/${thisExhibitor.image}`}
+        alt={'image pour ' + thisExhibitor.specialty}
       />
       <div className={style.titles}>
-        {exhibitor.businessName ? (
+        {thisExhibitor.businessName ? (
           <h3>
-            {exhibitor.businessName}
+            {thisExhibitor.businessName}
             <i>
               {' (' +
                 personRef[0].name.first +
@@ -25,7 +25,7 @@ const ExhibitorName = ({ exhibitor }) => {
         ) : (
           <h3>{personRef[0].name.first + ' ' + personRef[0].name.last}</h3>
         )}
-        <h4>{exhibitor.specialty}</h4>
+        <h4>{thisExhibitor.specialty}</h4>
       </div>
     </div>
   );

@@ -1,11 +1,26 @@
 import style from './AccordionItem.module.css';
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import classnames from 'classnames';
-const AccordionItem = () => {
+import useSWR from 'swr';
+import { fetchExhibitors } from '../../Services/fetchExhibitors';
+const AccordionItem = ({
+  thisExhibitor,
+  title = '404, not found :-(',
+  content = ['nothing', 'still nothing', 'nothing at all', 'empty, hè!'],
+}) => {
   const [isActive, setActive] = useState(true);
   const clickHandler = () => {
     setActive(!isActive);
   };
+  //* Requête : pour débuguer l'accordéon (peut-être)
+  // const {
+  //   data: content,
+  //   error,
+  //   isLoading,
+  // } = useSWR(
+  //   isActive ? `/api/exhibitors/${thisExhibitor._id}` : null,
+  //   fetchExhibitors
+  // );
   return (
     <>
       <section
@@ -16,14 +31,15 @@ const AccordionItem = () => {
       >
         <div className={style.accordionItem}>
           <div className={style.accordionTitle} onClick={clickHandler}>
-            {isActive ? <p>{'Accordion Item'} :</p> : <p>{'Accordion Item'}</p>}
+            {isActive ? <p>{title} :</p> : <p>{title}</p>}
           </div>
           {isActive ? (
             <div className={style.accordionContent}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-              doloribus cum quaerat, unde culpa facere nisi? In repellendus
-              sequi obcaecati quod sed facilis perferendis doloribus ut nihil
-              fuga, iure minus!
+              <ul>
+                {content.map((note) => (
+                  <li key={useId()}>{note}</li>
+                ))}
+              </ul>
             </div>
           ) : (
             <div className={style.accordionTriangle}></div>

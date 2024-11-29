@@ -1,0 +1,7 @@
+.identityItem {
+    background-color: var(--hover-color);
+    border-radius: var(--border-radius-items);
+    height: 250px;
+    width: 500px;
+    padding: var(--large-gap);
+}
