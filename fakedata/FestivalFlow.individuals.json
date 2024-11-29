@@ -1,0 +1,284 @@
+[{
+  "_id": {
+    "$oid": "673da971c61f7a9d5a175992"
+  },
+  "name": {
+    "first": "Jessie",
+    "last": "Pinkman"
+  },
+  "contact": {
+    "email": [],
+    "phone": [],
+    "adress": [],
+    "socialMedia": [],
+    "webSite": []
+  },
+  "memo": [
+    "he's hot"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673daa02c61f7a9d5a175994"
+  },
+  "name": {
+    "first": "Walter",
+    "last": "White"
+  },
+  "contact": {
+    "email": [],
+    "phone": [],
+    "adress": [],
+    "socialMedia": [],
+    "webSite": []
+  },
+  "memo": [
+    "he's hot"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673dab6bc61f7a9d5a175996"
+  },
+  "name": {
+    "first": "Soul",
+    "last": "Goodman"
+  },
+  "contact": {
+    "email": [],
+    "phone": [],
+    "adress": [],
+    "socialMedia": [],
+    "webSite": []
+  },
+  "memo": [
+    "advocates for lutherie"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673dadd4c61f7a9d5a175998"
+  },
+  "name": {
+    "first": "Soul",
+    "last": "Goodman"
+  },
+  "contact": {
+    "email": [],
+    "phone": [],
+    "adress": [],
+    "socialMedia": [],
+    "webSite": []
+  },
+  "memo": [
+    "advocates for lutherie"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673dae69c61f7a9d5a17599a"
+  },
+  "name": {
+    "first": "Ferry",
+    "last": "Bouman"
+  },
+  "contact": {
+    "email": [],
+    "phone": [],
+    "adress": [],
+    "socialMedia": [],
+    "webSite": []
+  },
+  "memo": [
+    null
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673daef5c61f7a9d5a17599c"
+  },
+  "name": {
+    "first": "gdsf",
+    "last": "fdsg"
+  },
+  "contact": {
+    "email": [],
+    "phone": [],
+    "adress": [],
+    "socialMedia": [],
+    "webSite": []
+  },
+  "memo": [
+    null
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673db427c61f7a9d5a17599e"
+  },
+  "name": {
+    "first": "John",
+    "last": "Doe"
+  },
+  "contact": {
+    "email": [
+      "john.doe@example.com"
+    ],
+    "phone": [
+      123456789
+    ],
+    "adress": [
+      "123 Main St"
+    ],
+    "socialMedia": [
+      "@johndoe"
+    ],
+    "webSite": [
+      "www.johndoe.com"
+    ]
+  },
+  "languages": {
+    "prefLanguage": "francais",
+    "francais": true,
+    "nederlands": false,
+    "english": true
+  },
+  "memo": [
+    "This is a note"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673db591c61f7a9d5a1759a0"
+  },
+  "name": {
+    "first": "Walter",
+    "last": "White"
+  },
+  "contact": {
+    "email": [],
+    "phone": [
+      123456789
+    ],
+    "adress": [
+      "Albuquerque"
+    ],
+    "socialMedia": [
+      "@heisenberg"
+    ],
+    "webSite": [
+      "www.heisenberg.com"
+    ]
+  },
+  "languages": {
+    "prefLanguage": "english",
+    "francais": true,
+    "nederlands": false,
+    "english": true
+  },
+  "memo": [
+    "He's cold"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673db5b8c61f7a9d5a1759a2"
+  },
+  "name": {
+    "first": "Jessie",
+    "last": "Pinkman"
+  },
+  "contact": {
+    "email": [],
+    "phone": [
+      123456789
+    ],
+    "adress": [
+      "Albuquerque"
+    ],
+    "socialMedia": [
+      "@jp_p"
+    ],
+    "webSite": []
+  },
+  "languages": {
+    "prefLanguage": "english",
+    "francais": false,
+    "nederlands": false,
+    "english": true
+  },
+  "memo": [
+    "He's hot"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673db5f2c61f7a9d5a1759a4"
+  },
+  "name": {
+    "first": "Soul",
+    "last": "Goodman"
+  },
+  "contact": {
+    "email": [],
+    "phone": [
+      123456789
+    ],
+    "adress": [
+      "Albuquerque"
+    ],
+    "socialMedia": [],
+    "webSite": [
+      "soul-goodman.to"
+    ]
+  },
+  "languages": {
+    "prefLanguage": "english",
+    "francais": false,
+    "nederlands": true,
+    "english": true
+  },
+  "memo": [
+    "Advocating avocado acadabra"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673db622c61f7a9d5a1759a6"
+  },
+  "name": {
+    "first": "Ferry",
+    "last": "Bouman"
+  },
+  "contact": {
+    "email": [],
+    "phone": [
+      123456789
+    ],
+    "adress": [
+      "Limburg, België"
+    ],
+    "socialMedia": [],
+    "webSite": [
+      "SilkRoad"
+    ]
+  },
+  "languages": {
+    "prefLanguage": "nederlands",
+    "francais": true,
+    "nederlands": true,
+    "english": true
+  },
+  "memo": [],
+  "__v": 0
+}]

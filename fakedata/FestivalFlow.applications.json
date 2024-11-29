@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "6735fed963c9aa05f5efd367"
+  },
+  "year": 2024,
+  "electricity": {
+    "devices": []
+  },
+  "specificRequests": [],
+  "comments": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6735ffe88d886e89ae75b2f4"
+  },
+  "year": 2024,
+  "emplacementId": {
+    "$oid": "6735f65241d4b07ad65209f8"
+  },
+  "electricity": {
+    "devices": []
+  },
+  "specificRequests": [],
+  "comments": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673600268d886e89ae75b2f8"
+  },
+  "year": 2024,
+  "emplacementId": {
+    "$oid": "6735f65241d4b07ad65209f8"
+  },
+  "nbChairs": 36,
+  "electricity": {
+    "devices": []
+  },
+  "specificRequests": [],
+  "comments": [],
+  "__v": 0
+}]
