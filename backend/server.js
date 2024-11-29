@@ -4,6 +4,13 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
 
+// const corsOptions = {
+//    origin: '*',  // Ou spécifiez une origine, par ex : 'http://localhost:3000'
+//    methods: 'GET, POST, PUT, DELETE, OPTIONS',
+//    allowedHeaders: 'Content-Type, Authorization',
+//    credentials: true
+// };
+// app.use(cors(corsOptions));
 app.use(cors({ origin: true, credentials: true }));
 // origin: 'http://localhost:5173/'
 
@@ -13,11 +20,11 @@ const db = require('./config/keys').mongoURI;
 console.log(process.env);
 
 mongoose
-  .connect(db, {})
-  .then(() => {
-    console.log('mongo db connected');
-  })
-  .catch((err) => console.log('error connecting to mongodb', err));
+   .connect(db, {})
+   .then(() => {
+      console.log('mongo db connected');
+   })
+   .catch((err) => console.log('error connecting to mongodb', err));
 
 //* Routes =========================================================>>>>>
 const emplacements = require('./routes/api/emplacements');
