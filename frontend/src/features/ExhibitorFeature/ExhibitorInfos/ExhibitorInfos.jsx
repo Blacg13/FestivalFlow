@@ -15,23 +15,21 @@ const ExhibitorInfos = ({ thisExhibitor = 'not found :-(' }) => {
       <p>SelectEmplacement</p>
       <p>FormItem</p>
       <AccordionItem
-        thisExhibitor={thisExhibitor}
+        thisExhibitor={thisExhibitor._id}
         title={'description'}
-        content={thisExhibitor.description}
+        request={'description'}
       />
       <AccordionItem
-        thisExhibitor={thisExhibitor}
+        thisExhibitor={thisExhibitor._id}
         title={'à retenir'}
-        content={thisExhibitor.memo}
+        request={'memo'}
       />
-      <AccordionItem
-        thisExhibitor={thisExhibitor}
+      {/* <AccordionItem
+        thisExhibitor={thisExhibitor._id}
         title={'feedbacks des précédentes années'}
-        content={thisExhibitor.feedbacks.map(
-          (feedback) => feedback.edition + ' : ' + feedback.review
-        )}
+        request={'feedbacks'}
       />
-      <AccordionItem />
+      <AccordionItem /> */}
     </>
   );
 };

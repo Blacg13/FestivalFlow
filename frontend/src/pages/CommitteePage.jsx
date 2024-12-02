@@ -7,7 +7,24 @@ const CommitteePage = () => {
       <Header />
       <main className='committeePage'>
         <h2>CommitteePage</h2>
-        <AccordionItem />
+        <AccordionItem
+          title={'exemple'}
+          content={[
+            'lorem ipsum dolor',
+            'sit amet consectetur adipisicing elit',
+            'Tenetur cumque vero laudantium fugit, eos nesciunt quia harum debitis!',
+            'Enim fuga tempore esse culpa ducimus odio beatae eligendi dolor repellat vel!',
+          ]}
+        />
+        <AccordionItem
+          title={'exemple'}
+          content={[
+            'lorem ipsum dolor',
+            'sit amet consectetur adipisicing elit',
+            'Tenetur cumque vero laudantium fugit, eos nesciunt quia harum debitis!',
+            'Enim fuga tempore esse culpa ducimus odio beatae eligendi dolor repellat vel!',
+          ]}
+        />
       </main>
       <Footer />
     </>
