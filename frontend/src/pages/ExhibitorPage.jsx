@@ -10,10 +10,10 @@ import ExhibitorInfos from '../features/ExhibitorFeature/ExhibitorInfos/Exhibito
 import IsLoading from '../shared/IsLoading/IsLoading';
 import Error from '../shared/Error/Error';
 import { useEffect } from 'react';
+import AccordionItem from '/src/shared/AccordionItem/AccordionItem';
 const ExhibitorPage = () => {
   const location = useLocation();
   const thisExhibitor = location.state;
-  console.log('thisExhibitor', thisExhibitor);
 
   const {
     data: thisExhibitorData,
@@ -43,6 +43,12 @@ const ExhibitorPage = () => {
         <Header />
         <main className='listPage'>
           <ExhibitorInfos thisExhibitor={thisExhibitorData} />
+          {/* <AccordionItem
+            thisExhibitor={thisExhibitorData._id}
+            title={'exemple'}
+            // request={'description'}
+            content={thisExhibitorData.description}
+          /> */}
         </main>
         <Footer />
       </>

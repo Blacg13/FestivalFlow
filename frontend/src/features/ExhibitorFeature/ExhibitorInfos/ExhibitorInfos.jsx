@@ -1,10 +1,11 @@
 import IdentityItem from '../IdentityItem/IdentityItem';
 import AccordionItem from '../../../shared/AccordionItem/AccordionItem';
+import style from './ExhibitorInfos.module.css';
 const ExhibitorInfos = ({ thisExhibitor = 'not found :-(' }) => {
   console.log('thisExhibitor', thisExhibitor);
 
   return (
-    <>
+    <div className={style.exhibitorInfos}>
       <IdentityItem thisExhibitor={thisExhibitor} />
       <h3>identité exposant</h3>
       <h3>identité personnes 1</h3>
@@ -17,20 +18,22 @@ const ExhibitorInfos = ({ thisExhibitor = 'not found :-(' }) => {
       <AccordionItem
         thisExhibitor={thisExhibitor._id}
         title={'description'}
-        request={'description'}
+        // request={'description'}
+        content={thisExhibitor.description}
       />
       <AccordionItem
         thisExhibitor={thisExhibitor._id}
         title={'à retenir'}
-        request={'memo'}
+        // request={'memo'}
+        content={thisExhibitor.memo}
       />
       {/* <AccordionItem
         thisExhibitor={thisExhibitor._id}
         title={'feedbacks des précédentes années'}
-        request={'feedbacks'}
-      />
-      <AccordionItem /> */}
-    </>
+        // request={'feedbacks'}
+        content={thisExhibitor.feedbacks}
+      /> */}
+    </div>
   );
 };
 export default ExhibitorInfos;

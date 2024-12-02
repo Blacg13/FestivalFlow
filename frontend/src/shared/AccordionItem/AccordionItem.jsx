@@ -9,7 +9,7 @@ import {
 const AccordionItem = ({
   thisExhibitor,
   title = '404, not found :-(',
-  request = ['nothing', 'still nothing', 'nothing at all', 'empty, hè!'],
+  content = ['nothing', 'still nothing', 'nothing at all', 'empty, hè!'],
 }) => {
   const {
     data: thisExhibitorData,
@@ -21,12 +21,12 @@ const AccordionItem = ({
     return <Error />;
   } else {
     console.log('thisExhibitorData', thisExhibitorData);
-    const content = thisExhibitorData[request];
+    // const content = thisExhibitorData[request];
     console.log('content', content);
 
     const [isActive, setActive] = useState(true);
     const clickHandler = () => {
-      setActive(!isActive);
+      setActive((prev) => !prev);
     };
     //* Requête : pour débuguer l'accordéon (peut-être)
     // const {
@@ -37,6 +37,18 @@ const AccordionItem = ({
     //   isActive ? `/api/exhibitors/${thisExhibitor._id}` : null,
     //   fetchExhibitors
     // );
+    console.log(content);
+    // return (
+    //   <>
+    //     {content.map((note) => (
+    //       <button key={useId()} onClick={clickHandler}>
+    //         {note}
+    //       </button>
+    //     ))}
+    //     {isActive ? <p>{title + 'pouet'}</p> : <p>{title}</p>}
+    //   </>
+    // );
+    const contentMapped = content.map((note) => <li key={useId()}>{note}</li>);
     return (
       <>
         <section
@@ -51,11 +63,7 @@ const AccordionItem = ({
             </div>
             {isActive ? (
               <div className={style.accordionContent}>
-                <ul>
-                  {content.map((note) => (
-                    <li key={useId()}>{note}</li>
-                  ))}
-                </ul>
+                <ul>{contentMapped}</ul>
               </div>
             ) : (
               <div className={style.accordionTriangle}></div>

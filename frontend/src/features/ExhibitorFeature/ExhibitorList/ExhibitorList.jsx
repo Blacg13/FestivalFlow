@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './ExhibitorList.module.css';
 import useSWR from 'swr';
-import { fetchExhibitors } from '../../../services/fetchExhibitors.js';
+import { fetchExhibitors } from '/src/services/fetchExhibitors.js';
 import IsLoading from '../../../shared/IsLoading/IsLoading.jsx';
 import Error from '../../../shared/Error/Error';
 import LastEmail from '../LastEmail/LastEmail';
@@ -35,7 +35,7 @@ const ExhibitorList = ({ format, defineFilter, defineSort, defineOrder }) => {
   //   setOrder(order);
   //   console.log('order defined', order);
   // };
-
+  console.log('exhibitorsData zafedykjafzedz : ', exhibitorsData);
   switch (format) {
     case 'div':
       return (
