@@ -1,0 +1,201 @@
+[{
+  "_id": {
+    "$oid": "673dbd633a33012b17bfac00"
+  },
+  "businessName": "Blue Ice",
+  "job": "restauration",
+  "specialty": "glaces",
+  "contact": {
+    "email": [
+      "blue.glass@hotmail.com"
+    ],
+    "phone": [
+      "144564314"
+    ],
+    "adress": [
+      "Panama"
+    ],
+    "socialMedia": [
+      null
+    ],
+    "webSite": [
+      "PirateBay"
+    ]
+  },
+  "status": {
+    "committeeAncient": false,
+    "newcomer": false,
+    "veteran": true,
+    "afficionados": true,
+    "disappointed": false,
+    "banished": false
+  },
+  "steps": {
+    "step1interest": true,
+    "step2needInfo": false,
+    "step3contract": {
+      "contractReceived": false,
+      "contractSend": false,
+      "contractInOrder": false
+    },
+    "step4payment": {
+      "paymentReceived": false,
+      "paymentAnnounced": false
+    },
+    "step5advertOnWebsite": true,
+    "step6welcoming": false,
+    "step7refund": false,
+    "step8recontactNextYear": true
+  },
+  "applicationRef": [
+    null
+  ],
+  "description": [
+    "toutes ses glaces sont bleues (et je pense qu'il met du café dedans)"
+  ],
+  "memo": [
+    "he is the danger"
+  ],
+  "__v": 0,
+  "image": "ice-cream.png",
+  "personRef": [
+    {
+      "$oid": "673db591c61f7a9d5a1759a0"
+    },
+    {
+      "$oid": "673db5b8c61f7a9d5a1759a2"
+    }
+  ],
+  "feedbacks": [
+    {
+      "edition": 2023,
+      "review": "bouh !"
+    },
+    {
+      "edition": 2020,
+      "review": "meilleure année !"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "673dbf193a33012b17bfac02"
+  },
+  "businessName": null,
+  "job": "lutherie",
+  "specialty": "cornemuses",
+  "contact": {
+    "email": null,
+    "phone": null,
+    "adress": null,
+    "socialMedia": null,
+    "webSite": [
+      "papapapipa.to"
+    ]
+  },
+  "status": {
+    "committeeAncient": true,
+    "newcomer": false,
+    "veteran": true,
+    "afficionados": true,
+    "disappointed": false,
+    "banished": false
+  },
+  "steps": {
+    "step1interest": true,
+    "step2needInfo": false,
+    "step3contract": {
+      "contractReceived": true,
+      "contractSend": true,
+      "contractInOrder": true
+    },
+    "step4payment": {
+      "paymentReceived": false,
+      "paymentAnnounced": false
+    },
+    "step5advertOnWebsite": true,
+    "step6welcoming": false,
+    "step7refund": false,
+    "step8recontactNextYear": true
+  },
+  "applicationRef": [
+    null
+  ],
+  "description": [
+    "aspirateur commandé",
+    "papapipaaa"
+  ],
+  "memo": [
+    "stand loin de blue ice"
+  ],
+  "__v": 0,
+  "image": "bagpipe.png",
+  "personRef": [
+    {
+      "$oid": "673db5f2c61f7a9d5a1759a4"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "673dc00e3a33012b17bfac04"
+  },
+  "businessName": "UnderKapper",
+  "job": "animation",
+  "specialty": "coiffure et maquillage",
+  "contact": {
+    "email": [
+      "kapper.en.botterham@proton.me"
+    ],
+    "phone": null,
+    "adress": [
+      "Limburg"
+    ],
+    "socialMedia": null,
+    "webSite": [
+      "underkapper.xz"
+    ]
+  },
+  "status": {
+    "committeeAncient": false,
+    "newcomer": true,
+    "veteran": false,
+    "afficionados": true,
+    "disappointed": false,
+    "banished": false
+  },
+  "steps": {
+    "step1interest": true,
+    "step2needInfo": true,
+    "step3contract": {
+      "contractReceived": true,
+      "contractSend": true,
+      "contractInOrder": true
+    },
+    "step4payment": {
+      "paymentReceived": true,
+      "paymentAnnounced": true
+    },
+    "step5advertOnWebsite": false,
+    "step6welcoming": true,
+    "step7refund": true,
+    "step8recontactNextYear": true
+  },
+  "applicationRef": [
+    null
+  ],
+  "description": [
+    "coupe tout ce qui dépasse"
+  ],
+  "memo": [
+    "très méfiant envers tout le monde",
+    "aime les barbecues"
+  ],
+  "__v": 0,
+  "image": "color-palette.png",
+  "personRef": [
+    {
+      "$oid": "673db622c61f7a9d5a1759a6"
+    }
+  ]
+}]

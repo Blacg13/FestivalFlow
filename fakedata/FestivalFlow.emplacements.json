@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "6735f56e41d4b07ad65209f4"
+  },
+  "name": "E1",
+  "localisation": "entrée",
+  "sunshineHours": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "description": [
+    "premier stand à droite"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6735f64e41d4b07ad65209f6"
+  },
+  "name": "E2",
+  "localisation": "entrée",
+  "sunshineHours": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "description": [
+    ""
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6735f65241d4b07ad65209f8"
+  },
+  "name": "J1",
+  "localisation": "jardin",
+  "sunshineHours": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "description": [
+    ""
+  ],
+  "__v": 0
+}]
