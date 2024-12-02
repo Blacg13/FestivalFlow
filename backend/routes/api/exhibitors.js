@@ -13,6 +13,16 @@ router.get('/', (request, response) => {
     .then((exhibitors) => response.json(exhibitors));
 });
 
+//* @route    GET api/exhibitor/:id
+//  @desc     Get One Exhibitor
+//  @access   Public
+router.get('/:id', (request, response) => {
+  Exhibitor.findById(request.params.id)
+    .populate('personRef')
+    // .populate('applicationRef')
+    .then((exhibitors) => response.json(exhibitors));
+});
+
 //todo: à tester
 //* @route    POST api/exhibitors
 //  @desc     Create A Post
