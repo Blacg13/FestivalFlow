@@ -1,5 +1,5 @@
 import Footer from '../shared/Footer/Footer';
-
+//todo: connection (not x)
 const ConnexionPage = () => {
   return (
     <>

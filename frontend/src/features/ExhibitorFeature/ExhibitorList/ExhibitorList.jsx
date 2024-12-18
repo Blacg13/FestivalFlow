@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './ExhibitorList.module.css';
 import useSWR from 'swr';
