@@ -1,12 +1,12 @@
 # FestivalFlow
 
-This website has been designed to help me in my voluntary work as exhibitor manager for a small festival in Wallonia.
+This website has been designed to help me in my voluntary work as an exhibitor manager for a small festival in Wallonia.
 
-This job consists of making and renewing contact with exhibitors, often known for a long time, and managing the contractualization and follow-up of payments for the next edition. 
+This job consists of making or renewing contact with exhibitors, often known for a long time, and monitoring the contractualization and follow-up of payments for the upcoming edition. 
 
-Without this website, I'd be using Excel spreadsheets (to draw up a list of exhibitors and their contact details, to have a summary of the follow-up to their commitment for the coming edition, notes to remind me of certain things, etc.), a mailbox of course (for exchanging messages with exhibitors but also with the rest of the organizing committee), the files in my office (for all documents, mail templates and archives), and a map of the festival site where I organize stand locations. 
+Without this website, I'd use Excel spreadsheets (to draw up a list of exhibitors and their contact details, to have a summary of the follow-up to their commitment for the coming edition, notes to remind me of certain things, etc.), a mailbox of course (for exchanging messages with exhibitors but also with the rest of the organizing committee), the files in my office (for all documents, mail templates and archives), and a map of the festival site by the use of I allocate emplacements. 
 I wanted to centralize all these tools into one, in the hope of being able to automate certain tasks (typically reminder emails for contract signature and payment). 
-In terms of data construction, I organized the *prioritization of functionalities* as follows:
+In terms of data construction, I organize the *prioritization of functionalities* as follows:
 1. Enable contact to be made
 2. Organize and save data
 3. Make the data communicate with each other 
@@ -36,7 +36,7 @@ Having started during my frontend developer training, I'd do a lot of things dif
 
 ## Needs analysis
 ### Job details and tasks
-The festival in question has around 30 pitches allocated to exhibitors. Firstly, restaurateurs provide festival-goers with food and drink. Secondly, luthiers are part of the festival's history, from a festival of musicians to a festival of dancers. Despite this evolution, the lutherie stands hold an important place, both for the identity of the festival, but also for many festival-goers who come to buy and/or repair musical instruments. Thirdly, the other exhibitors provide a variety of offerings to liven up the festival, in addition to the dancing and music.
+The festival in question has around 30 emplacements allocated to exhibitors. Firstly, restaurateurs provide festival-goers with food and drink. Secondly, luthiers are part of the festival's history, from a festival of musicians to a festival of dancers. Despite this evolution, the lutherie stands hold an important place, both for the identity of the festival, but also for many festival-goers who come to buy and/or repair musical instruments. Thirdly, the other exhibitors provide a variety of offerings to liven up the festival, in addition to the dancing and music.
 To prepare for this, the exhibitor manager contacts exhibitors from previous years, taking care to maintain a good balance between restorers, luthiers and other exhibitors. In particular, she must ensure that restorers do not compete with each other. If she doesn't have enough exhibitors registered in total, or for part of the offering (for example, there are no exhibitors offering dancing shoes, which is still a good thing to have for a dance festival), she contacts new people.
 In the registration process, she first asks if the exhibitor is interested in returning this year. If not, she asks if it's for this year only or in general. If yes, she sends the contract and potentially details the information if it's a new exhibitor. The possibility of having an advertising frame on the festival website is possible, for an additional charge. To complete registration, the contract must be signed and payment made. This may require several reminders. Following this, the exhibitor is expected at the festival, potentially with a personal welcome if the exhibitor is new. After the festival, the exhibitor manager is responsible for ensuring that deposits are reimbursed, in conjunction with the treasury department.
 A number of items of information need to be passed on to other members of the organizing committee:
@@ -60,9 +60,9 @@ Because coordination between managers is important, and major decisions concerni
 - Add, modify and delete exhibitor locations via an interactive map
 
 ### Prioritization of website functionalities
-1. Enable email contact
+1. Enable contact to be made
 2. Organize and save data
-3. Enable data to interact
+3. Make the data communicate with each other 
 
 ## Backend
 
