@@ -30,9 +30,13 @@ Having started during my frontend developer training, I'd do a lot of things dif
 		1. [Technologies used](#technologies-used)
 		2. [Softwares used](#softwares-used)
 5. [Frontend](#frontend)
-	1. [User's actions and React components](#user-s-actions-and-react-components)
-	2. [Interface (visuals and mockups)](#interface_visuals_and_mockups)
-	3. [Utilities](#utilities)
+	1. [Structure for now](#structure-for-now)
+	  	1. [assets](#assets)
+    		2. [features](#features)
+      		3. [pages (with visuals and mockups)](#pages)
+        	4. [services](#services)
+         	5. [shared](#shared) 
+	2. [Utilities](#utilities)
 		1. [Technologies used](#technologies-used)
 		2. [Softwares used](#softwares-used)
 
@@ -173,17 +177,21 @@ I'm thinking of reorganizing the exhibitor feature anyway, because the informati
 
 #### pages
 
-Note: The ConnexionPage will be use as a welcome screen to go to a version of the site with festival exhibitor data (for the admin) or one with fake data (for visitors like you).
+The list page lists all the exhibitors whose contacts I have. By clicking on an item in the list, I get all its information, as well as an assigned mailbox in the exhibitor page. I'll have mail templates ready on the side, which I can personalize in the mail directly before sending it. I'll be able to edit by double-clicking on each piece of information.
+I'll have a map page allocated to locations. So I'll have a condensed list of each exhibitor with information like their “favorite” booth next to the festival site map, and I'll be able to drag and drop each exhibitor. 
+As I also have to exchange information with other committee members, I'll have a committee page allocated to emails with the committee, with a list of documents on the side (meeting agendas, minutes of past meetings, treasury documents...) with the possibility of organizing them according to their importance.
+The archives page gives me access to all the information given by edition: list of registered exhibitors and their location, e-mails exchanged, minutes of meetings, etc. etc. The simplest solution would be to make a simple database export. The simplest solution would be to do a simple database export, but I could also arrange for this information to be displayed on the website, so I could browse through it. I haven't decided yet, as this function will come towards the end, but I think I'm heading for a simple information export.
+I decided this late (maybe too late): The connexion page will be use as a welcome screen to go to a version of the site with festival exhibitor data (for the admin) or one with fake data (for visitors like you).
 
 |Pages|Mockups|Visuals (for now)|
 |-----|-------|-----------------|
-|**ArchivePage**|
-|**CommitteePage**|
-|**ConnexionPage**|
-|**ExhibitorPage**|
-|**ListPage**|
-|**MapPage**|
-|**NotFoundPage**|
+|**ArchivesPage**|![mockup for the ArchivesPage](https://github.com/user-attachments/assets/3fa52c2a-c499-4117-8d9d-0403aa2aea53)|![visual of the ArchivesPage](https://github.com/user-attachments/assets/1b5614e1-a734-4f3e-aa29-2592f7edc7cc)|
+|**CommitteePage**|![mockup for the CommitteePage](https://github.com/user-attachments/assets/3c338baf-d3e7-4d16-9c3f-e80e47010a3a)|![visual of the CommittePage](https://github.com/user-attachments/assets/304fb804-955c-421a-b57c-71fd2516933c)|
+|**ConnexionPage**|||
+|**ExhibitorPage**|![mockup for the ExhibitorPage](https://github.com/user-attachments/assets/f4ef9692-8fce-425d-8de4-658a39aa63c9)|![visual of the ExhibitorPage](https://github.com/user-attachments/assets/46e6c875-9700-4a23-a255-f886404d05c8)|
+|**ListPage**|![mockup for the ListPage](https://github.com/user-attachments/assets/e9e5f65c-6d26-4586-8d4d-d926c06694c6)|![visual of the ListPage](https://github.com/user-attachments/assets/aa28b025-4d1b-4f9f-ba73-69b5bee1b047)|
+|**MapPage**||![visual of the MapPage](https://github.com/user-attachments/assets/39ae06ce-fc78-4803-8fd4-2e43b68cc841)|
+|**NotFoundPage**|||
 
 #### services
 
@@ -191,15 +199,23 @@ These are all the fetches, one for each collection of the database.
 
 #### shared
 
-The components contained in this folder are transversal to the entire website.
-
-
-### Visuals and mockups
-(mockups)
-J'ai d'abord réfléchi ce site web sur la fusion des outils Excel et boîte mail: La première page "exposants" recense tous les exposants dont j'ai les contacts. En cliquant sur un item de la liste, j'ai toutes ses informations, ainsi qu'une boîte mail attribuée. J'aurai des modèles de mail prêts sur le côté, que je pourrai personnaliser dans le mail directement avant de l'envoyer. Je pourrai modifier en double cliquant sur chaque information.
-J'aurai une page "carte" allouée aux emplacements. J'aurai donc une liste condensée de chaque exposant avec des informations comme son stand "préféré" à côté de la carte du site du festival, et je pourrai drag and drop chaque exposant. 
-Etant donné que j'ai aussi à échanger les autres membres du comité, j'aurai une page "comité" allouée aux mails avec le comité, avec une liste des documents sur le côté (ordre du jour des réunions, procès verbaux des anciennes réunion, documents de la trésorerie…) avec possibilité de les organiser selon leur importance.
-La page "archive" me permet d'avoir accès à toutes les informations données par édition : liste des exposants enregistrés et leur emplacement, mails échangés, procès verbaux des réunions, etc. etc. La solution la plus simple serait de faire un simple export de base de données, je pourrais aussi faire en sorte de montrer ces informations sur le site web et je pourrais donc naviguer dessus. Je n'ai pas encore décidé car cette fonction viendra vers la fin, mais je pense que je me dirige vers un simple export d'informations.
+The components contained in this folder are transversal to the entire website:
+ - **AccordionItem**: item that is an accordion with a title and a content, I tried my best to make it look nice and I am fond of the result.
+ 	- props: thisExhibitor, title, content.
+ - **Error**: a error message and a retry button. 
+ 	- props: message, onRetry.
+ - **Footer**: a simple footer that returns a paragraph.
+	- no props
+ - **FormItem**: an item that allows you to modify only one value by double-clicking on it.
+	- in construction, props: inputName, serverDataValue, inputType, tabIndex.
+ - **Header**: two components here: The NavBar and the ProgressBar. The progress bar allows me to see on all the pages where I'm at with the completion of the festival site allocations.
+	- in construction, no props yet.
+ - **IsLoading**: a loader or a spinner and a little message.
+	- props : message.
+ - **SelectEmplacementItem**: displays all the locations of "mplacement" in the database, in a <select> html element and sorted by area with the <optgroup> html element.
+	- no props.
+ - **utils**: for now, just a js function to slugify strings in order to have a clean and readable url.
+	- props of slugify: string.
 
 
 ### Utilities
