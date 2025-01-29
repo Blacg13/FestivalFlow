@@ -24,21 +24,18 @@ Having started during my frontend developer training, I'd do a lot of things dif
   1. [Job details and tasks](#job-details-and-tasks)
   2. [List of requirements](#list-of-requirements)
   3. [Prioritization of website functionalities](#prioritization-of-website-functionalities)
-4. [Backend](#backend)
+2. [Backend](#backend)
 	1. [Database](#database)
-	2. [Utilities](#utilities)
-		1. [Technologies used](#technologies-used)
-		2. [Softwares used](#softwares-used)
-5. [Frontend](#frontend)
+3. [Frontend](#frontend)
 	1. [Structure for now](#structure-for-now)
-	  	1. [assets](#assets)
-    		2. [features](#features)
-      		3. [pages (with visuals and mockups)](#pages)
-        	4. [services](#services)
-         	5. [shared](#shared) 
-	2. [Utilities](#utilities)
-		1. [Technologies used](#technologies-used)
-		2. [Softwares used](#softwares-used)
+ 		1. [assets](#assets)
+   		2. [features](#features)
+	 	3. [pages (with visuals and mockups)](#pages)
+   		4. [services](#services)
+     		5. [shared](#shared)
+4.  [Utilities](#utilities)
+   	1. [Technologies used](#technologies-used)
+	2. [Softwares used](#softwares-used)
 
 
 
@@ -115,28 +112,6 @@ If an exhibitor is interested in taking part in the festival, he can accept a se
 For each contract, one or two spaces are assigned to an exhibitor (two spaces because he has a double stand). Here too, the class is misnamed and should be called “location” or "space".
 
 As a contract is signed for a single edition but can be renewed to a next edition, the exhibitor can eventually have several contracts. On the other hand, he can only commit to one edition at a time. An edition brings together several exhibitors, this class summarizes the list of exhibitors who participated that year, as well as th relating contract and the e-mails exchanged.
-
-
-### Utilities
-
-#### Technologies used
-
-- body-parser (v1.20.3)
-- concurrently (v9.1.0)
-- cors (v2.8.5)
-- express (v4.21.1)
-- MongoDB (v6.11.0)
-- mongoose (v8.8.3)
-- nodejs (v10.8.1)
-- nodemon (v3.1.7)
-
-#### Softwares used
-
-- MongoDBCompass
-- ThunderClient (in the beginning)
-- Postman (then I changed)
-- Visual Studio Code
-
 
 
 
@@ -218,9 +193,24 @@ The components contained in this folder are transversal to the entire website:
 	- props of slugify: string.
 
 
-### Utilities
 
-#### Technologies used
+## Utilities
+
+
+### Technologies used
+
+#### In the backend:
+
+- body-parser (v1.20.3)
+- concurrently (v9.1.0)
+- cors (v2.8.5)
+- express (v4.21.1)
+- MongoDB (v6.11.0)
+- mongoose (v8.8.3)
+- nodejs (v10.8.1)
+- nodemon (v3.1.7)
+
+#### In the frontend:
 
 - axios (v1.7.7)
 - classnames (v2.5.1)
@@ -229,7 +219,17 @@ The components contained in this folder are transversal to the entire website:
 - react-select (v6.27.0)
 - swr (v2.2.5)
 
-#### Softwares used
+
+### Softwares used
+
+#### In the backend:
+
+- MongoDBCompass
+- ThunderClient (in the beginning)
+- Postman (then I changed)
+- Visual Studio Code
+
+#### In the frontend:
 
 - Adobe Illustrator (for the "step" icons)
 - Balsamiq
