@@ -25,14 +25,10 @@ Having started during my frontend developer training, I'd do a lot of things dif
 	2. [List of requirements](#list-of-requirements)
 	3. [Prioritization of website functionalities](#prioritization-of-website-functionalities)
 
-2. [Utilities](#utilities)
-   	1. [Technologies used](#technologies-used)
-	2. [Softwares used](#softwares-used)
-
-3. [Backend](#backend)
+2. [Backend](#backend)
 	1. [Database](#database)
 
-4. [Frontend](#frontend)
+3. [Frontend](#frontend)
    	1. [Structure for now](#structure-for-now)
 		1. [assets](#assets)
 		2. [features](#features)
@@ -40,7 +36,9 @@ Having started during my frontend developer training, I'd do a lot of things dif
 		4. [services](#services)
 		5. [shared](#shared)
 
-
+4. [Utilities](#utilities)
+   	1. [Technologies used](#technologies-used)
+	2. [Softwares used](#softwares-used)
 
 
 ## Needs analysis
@@ -64,7 +62,7 @@ A number of items of information need to be passed on to other members of the or
 
 - Information on exhibitors who have opted to pay for advertising on the festival website is forwarded to the communications manager.
 
-Because coordination between managers is important, and major decisions concerning the festival as a whole are made collegially, a committee meeting is held monthly. Agendas and minutes are exchanged. The Exhibitor Manager must therefore also follow up on this point.
+Because coordination between committee members is important, and major decisions concerning the festival as a whole are made collegially, a committee meeting is held monthly. Agendas and minutes are exchanged. The Exhibitor Manager must therefore also follow up on this point.
 
 
 ### List of requirements
@@ -89,52 +87,6 @@ Because coordination between managers is important, and major decisions concerni
 2. Organize and save data
 
 3. Make the data communicate with each other 
-
-
-## Utilities
-
-
-### Technologies used
-
-#### In the backend:
-
-- body-parser (v1.20.3)
-- concurrently (v9.1.0)
-- cors (v2.8.5)
-- express (v4.21.1)
-- MongoDB (v6.11.0)
-- mongoose (v8.8.3)
-- nodejs (v10.8.1)
-- nodemon (v3.1.7)
-
-#### In the frontend:
-
-- axios (v1.7.7)
-- classnames (v2.5.1)
-- react (v18.3.1)
-- react-router-dom (v6.27.0)
-- react-select (v6.27.0)
-- swr (v2.2.5)
-
-
-### Softwares used
-
-#### In the backend:
-
-- MongoDBCompass
-- ThunderClient (in the beginning)
-- Postman (then I changed)
-- Visual Studio Code
-
-#### In the frontend:
-
-- Adobe Illustrator (for the "step" icons)
-- Balsamiq
-- Figma
-- Visual Studio Code
-- Firefox
-- Google Chrome
-- Microsoft Edge
 
 
 
@@ -227,5 +179,51 @@ The components contained in this folder are transversal to the entire website:
 |**SelectEmplacementItem**|displays all the locations of "emplacement" in the database, in a <select> html element and sorted by area with the <optgroup> html element| _no props_ |
 |**utils**|for now, just a js function to slugify strings in order to have a clean and readable url|string|
 
+
+
+## Utilities
+
+
+### Technologies used
+
+#### In the backend:
+
+- body-parser (v1.20.3)
+- concurrently (v9.1.0)
+- cors (v2.8.5)
+- express (v4.21.1)
+- MongoDB (v6.11.0)
+- mongoose (v8.8.3)
+- nodejs (v10.8.1)
+- nodemon (v3.1.7)
+
+#### In the frontend:
+
+- axios (v1.7.7)
+- classnames (v2.5.1)
+- react (v18.3.1)
+- react-router-dom (v6.27.0)
+- react-select (v6.27.0)
+- swr (v2.2.5)
+
+
+### Softwares used
+
+#### In the backend:
+
+- MongoDBCompass
+- ThunderClient (in the beginning)
+- Postman (then I changed)
+- Visual Studio Code
+
+#### In the frontend:
+
+- Adobe Illustrator (for the "step" icons)
+- Balsamiq
+- Figma
+- Visual Studio Code
+- Firefox
+- Google Chrome
+- Microsoft Edge
 
 
